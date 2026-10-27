@@ -63,13 +63,13 @@ Los shaders de envejecimiento mnemotécnico no son librerías prefabricadas: son
 ```
 Criterio          │ Peso │ Nota      │ Ponderado │ Veredicto del Jurado de Hackathon
 ──────────────────┼──────┼───────────┼───────────┼─────────────────────────────────────────────────────────────────────────────
-Originalidad      │ 20%  │  9.8 / 10 │   1.960   │ Fusión maestra del Método de Loci milenario con shaders WebGL y DAGs pedagógicos.
-Ambición Técnica  │ 20%  │  9.6 / 10 │   1.920   │ Renderizado 3D en primera persona, R3F y audio interactivo en maratón de 36h.
-Ejecución en Vivo │ 25%  │  9.5 / 10 │   2.375   │ Resiliencia ejemplar bajo fuego: el fallback procedural salvó la demo en el escenario.
-Impacto de Mercado│ 20%  │  9.4 / 10 │   1.880   │ Ganador del 34.5% de probabilidad en el market de predicción; favorito del público.
-Arquitectura Code │ 15%  │  9.8 / 10 │   1.470   │ Monorepo R3F con control estricto de draw calls (<300) y testing de layout en Vitest.
+Originalidad      │ 20%  │  8.4 / 10 │   1.680   │ Fusión del Método de Loci con shaders WebGL y DAGs pedagógicos.
+Ambición Técnica  │ 20%  │  8.0 / 10 │   1.600   │ Renderizado 3D en primera persona, R3F y audio interactivo en maratón de 36h.
+Ejecución en Vivo │ 25%  │  8.0 / 10 │   2.000   │ Resiliencia bajo fuego: el fallback procedural salvó la demo en el escenario.
+Impacto de Mercado│ 20%  │  8.0 / 10 │   1.600   │ Ganador del 34.5% de probabilidad en el market de predicción; favorito del público.
+Arquitectura Code │ 15%  │  7.8 / 10 │   1.170   │ Monorepo R3F con control estricto de draw calls (<300) y testing de layout en Vitest.
 ──────────────────┼──────┼───────────┼───────────┼─────────────────────────────────────────────────────────────────────────────
-TOTAL CANÓNICO    │ 100% │ 9.65 / 10 │ 9.605 / 10│ 🏆 GANADOR ABSOLUTO DE LA PLATANUS HACK 26 CARACAS
+TOTAL CANÓNICO    │ 100% │ 8.00 / 10 │ 8.050 / 10│ 🏆 TECHO TÉCNICO REAL DE LA HACKATHON Y GANADOR ABSOLUTO
 ```
 
 ---

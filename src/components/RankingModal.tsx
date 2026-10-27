@@ -119,10 +119,10 @@ export const RankingModal: React.FC<RankingModalProps> = ({
                     </td>
                     <td className="py-3 px-3 text-right whitespace-nowrap">
                       <span className={`text-sm font-black px-2 py-0.5 rounded-lg ${
-                        team.technicalScore >= 9.5 ? 'bg-banana-500/20 text-banana-300 border border-banana-500/30' :
-                        team.technicalScore >= 9.0 ? 'bg-emerald-500/20 text-emerald-300' :
-                        team.technicalScore >= 8.0 ? 'bg-blue-500/20 text-blue-300' :
-                        team.technicalScore >= 7.0 ? 'bg-neutral-800 text-neutral-300' :
+                        team.technicalScore >= 8.0 ? 'bg-banana-500/20 text-banana-300 border border-banana-500/30' :
+                        team.technicalScore >= 5.5 ? 'bg-emerald-500/20 text-emerald-300' :
+                        team.technicalScore >= 4.0 ? 'bg-blue-500/20 text-blue-300' :
+                        team.technicalScore >= 3.0 ? 'bg-neutral-800 text-neutral-300' :
                         'bg-red-500/20 text-red-400'
                       }`}>
                         {team.technicalScore.toFixed(2)}
