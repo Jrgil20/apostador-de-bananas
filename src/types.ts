@@ -10,14 +10,16 @@ export interface TeamEvaluation {
   executionScore: number;
   impactScore: number;
   architectureScore: number;
+  finalMarketProb: number; // Probabilidad final real en el mercado (%)
   verdictLabel: string;
   summary: string;
   stack: string[];
   loc: number;
-  testsCount: number;
+  implementationQuality: string; // Diagnóstico de complejidad real (no vanidad de tests)
   repoUrl: string;
   keyStrengths: string[];
   criticalFlaws: string[];
+  isWinner?: boolean;
   penalties: {
     originality: string;
     ambition: string;

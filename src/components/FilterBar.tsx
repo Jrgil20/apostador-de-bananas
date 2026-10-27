@@ -71,11 +71,11 @@ export const FilterBar: React.FC<FilterBarProps> = ({
             onChange={(e) => onSortChange(e.target.value)}
             className="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-3 py-2 text-xs font-semibold text-neutral-300 focus:outline-none focus:border-banana-500 transition"
           >
-            <option value="combined">Puntaje Combinado (Técnico + Pitch)</option>
-            <option value="technical">Mayor Nota Técnica en HEAD</option>
+            <option value="market">Mayor Probabilidad de Mercado (%)</option>
+            <option value="combined">Score Hackathon (Demo 60% + Código 40%)</option>
+            <option value="technical">Mayor Calidad Técnica Real</option>
             <option value="recommended">Mayor Apuesta Sugerida</option>
-            <option value="odds">Mayor Cuota (Underdogs)</option>
-            <option value="tests">Más Tests Automatizados</option>
+            <option value="odds">Mayor Cuota de Mercado</option>
           </select>
         </div>
       </div>

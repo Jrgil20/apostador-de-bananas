@@ -40,7 +40,7 @@ export const App: React.FC = () => {
   // UI state
   const [search, setSearch] = useState('');
   const [selectedTrack, setSelectedTrack] = useState('all');
-  const [sortBy, setSortBy] = useState('combined');
+  const [sortBy, setSortBy] = useState('market');
   const [isRankingOpen, setIsRankingOpen] = useState(false);
   const [isSlipOpen, setIsSlipOpen] = useState(false);
 
@@ -147,13 +147,13 @@ export const App: React.FC = () => {
     }).sort((a, b) => {
       const pitchA = pitches[a.id] ?? 6.0;
       const pitchB = pitches[b.id] ?? 6.0;
-      const combA = a.technicalScore * 0.6 + pitchA * 0.4;
-      const combB = b.technicalScore * 0.6 + pitchB * 0.4;
+      const combA = a.technicalScore * 0.40 + pitchA * 0.60;
+      const combB = b.technicalScore * 0.40 + pitchB * 0.60;
 
+      if (sortBy === 'market') return b.finalMarketProb - a.finalMarketProb;
       if (sortBy === 'combined') return combB - combA;
       if (sortBy === 'technical') return b.technicalScore - a.technicalScore;
-      if (sortBy === 'odds') return calculateMarketOdds(b.technicalScore) - calculateMarketOdds(a.technicalScore);
-      if (sortBy === 'tests') return b.testsCount - a.testsCount;
+      if (sortBy === 'odds') return calculateMarketOdds(b.technicalScore, b.finalMarketProb) - calculateMarketOdds(a.technicalScore, a.finalMarketProb);
       if (sortBy === 'recommended') {
         const recA = calculateBetRecommendation(a, pitchA, bankroll);
         const recB = calculateBetRecommendation(b, pitchB, bankroll);

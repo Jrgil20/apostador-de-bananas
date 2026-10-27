@@ -7,7 +7,8 @@ import {
   CheckCircle2, 
   AlertTriangle, 
   Code2, 
-  Send 
+  Send,
+  Trophy
 } from 'lucide-react';
 import { TeamEvaluation } from '../types';
 import { calculateBetRecommendation } from '../domain/betting-engine';
@@ -33,7 +34,7 @@ export const TeamCard: React.FC<TeamCardProps> = ({
   const [customAmount, setCustomAmount] = useState<string>('');
 
   const recommendation = calculateBetRecommendation(team, pitchScore, bankroll);
-  const isDisqualified = team.technicalScore <= 2.5;
+  const isDisqualified = team.technicalScore <= 2.5 || team.finalMarketProb <= 0;
 
   const handleCustomBet = (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,10 +62,24 @@ export const TeamCard: React.FC<TeamCardProps> = ({
 
   return (
     <div className={`relative bg-neutral-900 border rounded-2xl transition shadow-lg overflow-hidden flex flex-col justify-between ${
+      team.isWinner ? 'border-banana-400/80 ring-2 ring-banana-500/40 shadow-banana-500/10' :
       currentBet > 0 ? 'border-banana-500/80 ring-1 ring-banana-500/30' : 'border-neutral-800 hover:border-neutral-700'
     }`}>
+      {/* Winner Banner */}
+      {team.isWinner && (
+        <div className="bg-gradient-to-r from-amber-400 via-banana-400 to-yellow-500 px-4 py-1 text-neutral-950 font-black text-xs flex items-center justify-between shadow-md">
+          <span className="flex items-center gap-1.5">
+            <Trophy className="w-3.5 h-3.5 fill-neutral-950" />
+            PROYECTO GANADOR · PLATANUS HACK
+          </span>
+          <span className="font-mono bg-neutral-950 text-banana-300 px-2 py-0.5 rounded text-[10px]">
+            34.5% MARKET
+          </span>
+        </div>
+      )}
+
       {/* Top Banner / Badge if Bet Placed */}
-      {currentBet > 0 && (
+      {currentBet > 0 && !team.isWinner && (
         <div className="bg-gradient-to-r from-banana-500 to-amber-600 px-4 py-1 text-neutral-950 font-black text-xs flex items-center justify-between">
           <span>APUESTA EN JUEGO</span>
           <span>🍌 {currentBet.toLocaleString()} (Paga 🍌 {Math.round(currentBet * recommendation.odds).toLocaleString()})</span>
@@ -93,7 +108,7 @@ export const TeamCard: React.FC<TeamCardProps> = ({
 
           {/* Cuota / Odds Tag */}
           <div className="text-right">
-            <div className="text-[10px] uppercase font-bold text-neutral-400">Cuota</div>
+            <div className="text-[10px] uppercase font-bold text-neutral-400">Cuota Mercado</div>
             <div className={`text-xl font-black ${isDisqualified ? 'text-neutral-600' : 'text-banana-400'}`}>
               {isDisqualified ? '0.00x' : `${recommendation.odds.toFixed(2)}x`}
             </div>
@@ -108,18 +123,21 @@ export const TeamCard: React.FC<TeamCardProps> = ({
         {/* Technical Stats Strip */}
         <div className="grid grid-cols-3 gap-2 bg-neutral-950/70 p-2.5 rounded-xl border border-neutral-800/80 mb-4 text-center">
           <div>
-            <div className="text-[10px] text-neutral-500 font-semibold uppercase">Nota Auditoría</div>
+            <div className="text-[10px] text-neutral-500 font-semibold uppercase">Calidad Técnica</div>
             <div className="text-sm font-black text-neutral-200">{team.technicalScore.toFixed(2)}</div>
           </div>
           <div>
-            <div className="text-[10px] text-neutral-500 font-semibold uppercase">Tests HEAD</div>
-            <div className={`text-sm font-black ${team.testsCount > 0 ? 'text-emerald-400' : 'text-neutral-600'}`}>
-              {team.testsCount}
+            <div className="text-[10px] text-neutral-500 font-semibold uppercase">Prob. Mercado</div>
+            <div className={`text-sm font-black font-mono ${
+              team.finalMarketProb >= 10 ? 'text-emerald-400' : 
+              team.finalMarketProb > 0 ? 'text-banana-400' : 'text-neutral-600'
+            }`}>
+              {team.finalMarketProb.toFixed(1)}%
             </div>
           </div>
           <div>
-            <div className="text-[10px] text-neutral-500 font-semibold uppercase">Ponderado Total</div>
-            <div className="text-sm font-black text-banana-300">
+            <div className="text-[10px] text-neutral-500 font-semibold uppercase">Score Hackathon</div>
+            <div className="text-sm font-black text-banana-300 font-mono">
               {recommendation.combinedScore.toFixed(2)}
             </div>
           </div>
@@ -130,7 +148,7 @@ export const TeamCard: React.FC<TeamCardProps> = ({
           <div className="flex items-center justify-between text-xs mb-1.5">
             <span className="font-bold text-neutral-300 flex items-center gap-1">
               <Sparkles className="w-3.5 h-3.5 text-banana-400" />
-              Calificación de Pitch en Vivo:
+              Demo y Pitch en Escenario:
             </span>
             <span className={`font-black text-sm px-2 py-0.5 rounded-md ${
               pitchScore >= 8 ? 'bg-emerald-500/20 text-emerald-300' :
@@ -143,75 +161,70 @@ export const TeamCard: React.FC<TeamCardProps> = ({
 
           <input
             type="range"
-            min="1"
-            max="10"
-            step="0.5"
+            min="1.0"
+            max="10.0"
+            step="0.1"
             value={pitchScore}
             onChange={(e) => onPitchChange(parseFloat(e.target.value))}
-            className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-banana-400"
+            className="w-full accent-banana-500 cursor-pointer h-1.5 bg-neutral-800 rounded-lg"
           />
-
-          <div className="flex justify-between text-[10px] text-neutral-500 mt-1 font-semibold">
-            <span>1 (Humo/Caído)</span>
-            <span>5 (Promedio)</span>
-            <span>10 (Brillante)</span>
+          <div className="flex justify-between text-[10px] text-neutral-500 mt-1 font-mono">
+            <span>1.0 Demo fallida</span>
+            <span>6.0 Estándar</span>
+            <span>10.0 Ovación total</span>
           </div>
         </div>
 
-        {/* Betting Recommendation Box */}
-        <div className="border border-neutral-800 bg-neutral-950/40 rounded-xl p-3 mb-4">
-          <div className="flex items-center justify-between mb-1.5">
-            <span className={`text-[10px] font-black px-2 py-0.5 rounded-full border ${getTagColor(recommendation.confidenceTag)}`}>
+        {/* Quantitative Recommendation Card */}
+        <div className="bg-neutral-950 p-3.5 rounded-xl border border-neutral-800/80 mb-4">
+          <div className="flex items-center justify-between mb-2">
+            <span className={`text-[10px] font-black uppercase px-2 py-0.5 rounded border tracking-wide ${getTagColor(recommendation.confidenceTag)}`}>
               {recommendation.confidenceTag}
             </span>
-            {recommendation.expectedValue > 0 && (
-              <span className="text-[11px] font-bold text-emerald-400">
-                EV: +{(recommendation.expectedValue * 100).toFixed(0)}%
+            <div className="text-xs font-mono">
+              <span className="text-neutral-500 mr-1">EV:</span>
+              <span className={`font-bold ${recommendation.expectedValue > 0 ? 'text-emerald-400' : 'text-neutral-500'}`}>
+                {recommendation.expectedValue > 0 ? `+${(recommendation.expectedValue * 100).toFixed(0)}%` : `${(recommendation.expectedValue * 100).toFixed(0)}%`}
               </span>
-            )}
+            </div>
           </div>
-          <p className="text-xs text-neutral-400 leading-snug mb-2.5">
+
+          <p className="text-[11px] text-neutral-300 leading-relaxed mb-3">
             {recommendation.analysisReason}
           </p>
 
-          {/* Quick Bet Button */}
-          {!isDisqualified && recommendation.recommendedAmount > 0 && (
-            <button
-              onClick={() => onPlaceBet(recommendation.recommendedAmount)}
-              disabled={bankroll < recommendation.recommendedAmount}
-              className="w-full bg-banana-500 hover:bg-banana-400 disabled:bg-neutral-800 disabled:text-neutral-500 text-neutral-950 font-black text-xs py-2 rounded-xl transition flex items-center justify-center gap-1.5 shadow-md"
-            >
-              🍌 Apostar Sugerido: {recommendation.recommendedAmount} Bananas
-            </button>
-          )}
-
-          {isDisqualified && (
-            <div className="text-xs text-neutral-500 font-semibold text-center py-1">
-              Apuestas bloqueadas (Sin entregable)
-            </div>
-          )}
+          <div className="flex items-center justify-between text-xs pt-2 border-t border-neutral-800/60 font-semibold">
+            <span className="text-neutral-400">Kelly Recomendado:</span>
+            <span className="text-banana-400 font-bold font-mono">
+              🍌 {recommendation.recommendedAmount.toLocaleString()} bananas
+            </span>
+          </div>
         </div>
 
-        {/* Custom Bet Form */}
+        {/* Betting Action Buttons */}
         {!isDisqualified && (
-          <div className="flex flex-col gap-2 pt-1 border-t border-neutral-800/80">
-            <div className="flex items-center gap-1.5">
-              {[10, 50, 100].map((amt) => (
-                <button
-                  key={amt}
-                  onClick={() => onPlaceBet(amt)}
-                  disabled={bankroll < amt}
-                  className="flex-1 bg-neutral-800/80 hover:bg-neutral-700 disabled:opacity-40 text-neutral-300 text-xs font-bold py-1.5 rounded-lg border border-neutral-700 transition"
-                >
-                  +{amt}
-                </button>
-              ))}
+          <div className="space-y-2">
+            <div className="grid grid-cols-3 gap-1.5">
               <button
-                onClick={() => onPlaceBet(bankroll)}
-                disabled={bankroll <= 0}
-                className="px-2.5 bg-red-950/40 hover:bg-red-900/50 text-red-300 border border-red-800/40 text-xs font-bold py-1.5 rounded-lg transition"
+                onClick={() => onPlaceBet(25)}
+                disabled={bankroll < 25}
+                className="bg-neutral-800 hover:bg-neutral-700 disabled:opacity-40 text-neutral-200 text-xs font-bold py-1.5 rounded-lg border border-neutral-700 transition"
               >
-                ALL IN
+                +25 🍌
+              </button>
+              <button
+                onClick={() => onPlaceBet(50)}
+                disabled={bankroll < 50}
+                className="bg-neutral-800 hover:bg-neutral-700 disabled:opacity-40 text-neutral-200 text-xs font-bold py-1.5 rounded-lg border border-neutral-700 transition"
+              >
+                +50 🍌
+              </button>
+              <button
+                onClick={() => onPlaceBet(recommendation.recommendedAmount)}
+                disabled={bankroll < recommendation.recommendedAmount || recommendation.recommendedAmount === 0}
+                className="bg-banana-500 hover:bg-banana-400 disabled:opacity-30 text-neutral-950 text-xs font-black py-1.5 rounded-lg transition"
+              >
+                Kelly 🍌
               </button>
             </div>
 
@@ -252,6 +265,16 @@ export const TeamCard: React.FC<TeamCardProps> = ({
 
         {expanded && (
           <div className="px-5 pb-5 pt-2 text-xs text-neutral-300 space-y-3 border-t border-neutral-800/40 bg-neutral-950/70">
+            {/* Implementation Quality */}
+            <div className="bg-neutral-900 border border-neutral-800 rounded-lg p-2.5">
+              <div className="text-[10px] uppercase font-bold text-banana-400 mb-1">
+                Arquitectura e Implementación Real
+              </div>
+              <p className="text-[11px] text-neutral-300 leading-relaxed font-mono">
+                {team.implementationQuality}
+              </p>
+            </div>
+
             {/* Stack Tags */}
             <div>
               <div className="text-[10px] uppercase font-bold text-neutral-500 mb-1">Stack en HEAD</div>
@@ -281,7 +304,7 @@ export const TeamCard: React.FC<TeamCardProps> = ({
             {/* Flaws / What Exigent Judge Penalizes */}
             <div>
               <div className="text-[10px] uppercase font-bold text-amber-400 mb-1 flex items-center gap-1">
-                <AlertTriangle className="w-3 h-3" /> Lo que el Jurado Penaliza
+                <AlertTriangle className="w-3 h-3" /> Lo que el Jurado Señaló
               </div>
               <div className="bg-neutral-900 border border-neutral-800 rounded-lg p-2.5 text-[11px] text-neutral-300 space-y-1">
                 <p><strong className="text-neutral-400">Originalidad:</strong> {team.penalties.originality}</p>

@@ -1,702 +1,954 @@
-import { TeamEvaluation } from '../types';
+import { TeamEvaluation } from "../types";
 
 export const TEAMS_DATA: TeamEvaluation[] = [
   {
-    id: 27,
-    name: "MAMÁ",
-    track: "🚨 Emergencias",
-    technicalScore: 9.49,
-    originalityScore: 9.5,
-    ambitionScore: 9.6,
-    executionScore: 9.4,
-    impactScore: 9.7,
-    architectureScore: 9.3,
-    verdictLabel: "PROYECTO GANADOR ABSOLUTO: PERFECCIÓN CONCEPTUAL Y AUDACIA TÉCNICA",
-    summary: "Alarma silenciosa de secuestro disfrazada de llamada interactiva de 'Mamá' con detección de coacción por IA, APK Android nativo, Go backend y malla BLE BitChat.",
-    stack: ["Kotlin", "Go", "BitChat Mesh", "WhatsApp API", "Render"],
-    loc: 67542,
-    testsCount: 157,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-27",
-    keyStrengths: [
-      "Detector de coacción híbrido en Go (reglas primero + LLM acotado a 6s sin falso positivo)",
-      "Cifrado SealedBox.kt y fragmentación compatible con protocolo BitChat iOS",
-      "+150 tests automatizados y +160 PRs mergeados disciplinadamente"
+    "id": 5,
+    "name": "mus3o",
+    "track": "\ud83e\uddca Three-Dimensional",
+    "technicalScore": 9.65,
+    "originalityScore": 9.8,
+    "ambitionScore": 9.6,
+    "executionScore": 9.5,
+    "impactScore": 9.4,
+    "architectureScore": 9.8,
+    "finalMarketProb": 34.5,
+    "isWinner": true,
+    "verdictLabel": "\ud83c\udfc6 GANADOR INDISCUTIDO: ARQUITECTURA 3D EN 4 CAPAS Y RESILIENCIA EN VIVO",
+    "summary": "Palacios de la memoria 3D navegables en primera persona que transforman apuntes en salas tem\u00e1ticas interactivas con shaders GLSL de desgaste crom\u00e1tico (curva del olvido) y asistente Aris.",
+    "stack": [
+      "TypeScript",
+      "Next.js",
+      "Three.js",
+      "React Three Fiber",
+      "Vitest",
+      "GLSL Shaders",
+      "TailwindCSS"
     ],
-    criticalFlaws: [
-      "Dependencia de permisos en segundo plano sensibles a optimizaciones agresivas de batería en Xiaomi HyperOS"
+    "loc": 43990,
+    "implementationQuality": "Monorepo R3F optimizado (<300 draw calls), testing de layout espacial en Vitest sin GPU y fallback procedural tolerante a fallos",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-5",
+    "keyStrengths": [
+      "Validaci\u00f3n rigurosa en 4 capas: l\u00f3gica espacial (Vitest), rendimiento (<300 draw calls), capturas visuales y recorrido humano",
+      "Shaders GLSL custom para disoluci\u00f3n y envejecimiento de objetos seg\u00fan la curva de Ebbinghaus",
+      "Mecanismo de resiliencia con fallback procedural que rescat\u00f3 la demo en vivo ante ca\u00eddas de APIs externas",
+      "Monorepo con paquete dungeon-core y generaci\u00f3n procedural de salas con grafos DAG de prerrequisitos"
     ],
-    penalties: {
-      originality: "Disfrazar una alarma silenciosa detrás de una llamada maternal verosímil con IA.",
-      ambition: "Integrar Android nativo, Go backend, BitChat mesh y WhatsApp API en 48 horas.",
-      execution: "APK compilado para descarga inmediata, backend en Render y 157 tests.",
-      impact: "Salvavidas real en un entorno con altos índices de extorsión y robos.",
-      technical: "Arquitectura offline-first impecable; requiere afinar permisos en capas de Xiaomi."
+    "criticalFlaws": [
+      "Requiere GPU dedicada para renderizado a 60 FPS estables con m\u00faltiples salas simult\u00e1neas",
+      "Fricci\u00f3n inicial al cargar modelos GLTF de alta poligonalidad sin compresi\u00f3n Draco"
+    ],
+    "penalties": {
+      "originality": "Excelente fusi\u00f3n del m\u00e9todo mnemot\u00e9cnico de Loci cl\u00e1sico con WebGL moderno.",
+      "ambition": "Ambic\u00edon m\u00e1xima al modelar un palacio interactivo con audio y f\u00edsica en 36h.",
+      "execution": "Demo impecable con fallback procedural en vivo tras resolver fallo externo en el escenario.",
+      "impact": "Alto valor educativo; convierte lectura pasiva en exploraci\u00f3n espacial interactiva.",
+      "technical": "Arquitectura limpia con separaci\u00f3n estricta de canvas, shaders y l\u00f3gica de navegaci\u00f3n."
     }
   },
   {
-    id: 4,
-    name: "Agent Zero",
-    track: "🛡️ AI Security",
-    technicalScore: 9.15,
-    originalityScore: 9.0,
-    ambitionScore: 9.3,
-    executionScore: 9.0,
-    impactScore: 9.1,
-    architectureScore: 9.3,
-    verdictLabel: "SUITE EXCEPCIONAL DE RED-TEAMING AUTÓNOMO; MÁXIMA ROBUSTEZ",
-    summary: "Workbench integral de red-teaming distribuido para LLMs que genera mutaciones de ataque y sintetiza políticas de flujo de información para neutralizar jailbreaks.",
-    stack: ["Python", "FastAPI", "TypeScript", "React", "Biome", "Docker"],
-    loc: 54962,
-    testsCount: 296,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-4",
-    keyStrengths: [
-      "296 archivos de test que cubren oráculos, replay de grafos y síntesis formal",
-      "Síntesis automática de reglas (untrusted_origin, exceeds, not_session_owner)",
-      "Frontend pulido con Biome y arquitectura por capas estricta"
+    "id": 2,
+    "name": "Arvi",
+    "track": "\ud83e\udd1d Trust",
+    "technicalScore": 8.95,
+    "originalityScore": 9.0,
+    "ambitionScore": 9.2,
+    "executionScore": 8.8,
+    "impactScore": 8.9,
+    "architectureScore": 8.8,
+    "finalMarketProb": 19.7,
+    "verdictLabel": "SUBCAMPE\u00d3N DE MERCADO: GU\u00cdA TUR\u00cdSTICO CON VISI\u00d3N E IA CONVERSACIONAL",
+    "summary": "Gu\u00eda tur\u00edstico interactivo en el bolsillo: el usuario apunta su c\u00e1mara a un monumento o lugar hist\u00f3rico y personajes 3D interactivos conversan con \u00e9l en tiempo real.",
+    "stack": [
+      "Python (FastAPI)",
+      "React Native / Expo",
+      "Three.js",
+      "WebGL",
+      "OpenAI Whisper & TTS",
+      "Docker"
     ],
-    criticalFlaws: [
-      "EventStore en memoria sin persistencia en disco que puede agotar RAM en ataques prolongados"
+    "loc": 18200,
+    "implementationQuality": "Pipeline de streaming de visi\u00f3n y s\u00edntesis de voz sincronizada con avatares 3D interactivos",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-2",
+    "keyStrengths": [
+      "Integraci\u00f3n de c\u00e1mara en tiempo real con agentes de contexto geolocalizado",
+      "S\u00edntesis de audio con baja latencia y animaci\u00f3n facial b\u00e1sica",
+      "Pitch de alto impacto visual y empat\u00eda inmediata con el jurado y p\u00fablico"
     ],
-    penalties: {
-      originality: "Workbench adversarial autónomo con mutación dinámica de vectores.",
-      ambition: "Framework completo distribuido con validación formal de parches.",
-      execution: "296 tests unitarios y de integración; leve consumo alto de memoria en trazas SSE.",
-      impact: "Ahorra miles de dólares en auditorías de ciberseguridad para agentes empresariales.",
-      technical: "Base de código ejemplar (+50k LOC) con Biome y tipado estricto."
+    "criticalFlaws": [
+      "Dependencia de conectividad 4G estable y latencia perceptible en llamadas concurrentes al LLM",
+      "Consumo intensivo de bater\u00eda en dispositivos m\u00f3viles de gama media"
+    ],
+    "penalties": {
+      "originality": "Muy buena vuelta de tuerca a audiogu\u00edas tradicionales con personajes interactivos.",
+      "ambition": "Elevada complejidad al combinar Computer Vision, LLM y 3D m\u00f3vil.",
+      "execution": "Demo fluida pero con momentos de buffer de audio.",
+      "impact": "Potencial tur\u00edstico y cultural inmediato en Latinoam\u00e9rica.",
+      "technical": "Backend monol\u00edtico funcional en FastAPI con contenedor Docker bien configurado."
     }
   },
   {
-    id: 22,
-    name: "VanGUARD",
-    track: "🛡️ AI Security",
-    technicalScore: 9.02,
-    originalityScore: 8.9,
-    ambitionScore: 9.3,
-    executionScore: 8.6,
-    impactScore: 9.0,
-    architectureScore: 9.2,
-    verdictLabel: "PESO PESADO DE INGENIERÍA: FIREWALL EN CLOUDFLARE EDGE",
-    summary: "Firewall y observabilidad en tiempo real para agentes autónomos en Cloudflare Workers y D1 SQL, con modo Under-Attack automatizado y mitigación de inyección indirecta.",
-    stack: ["TypeScript", "Cloudflare Workers", "D1 SQL", "Next.js", "Python (Voice Agent)"],
-    loc: 97028,
-    testsCount: 186,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-22",
-    keyStrengths: [
-      "186 tests automatizados y schemas SQL estrictos en Cloudflare D1",
-      "Acción de contención inmediata under-attack.ts para aislar zonas vulneradas",
-      "Presupuesto estricto de tokens de Claude en la capa de inferencia"
+    "id": 22,
+    "name": "VanGUARD",
+    "track": "\ud83d\udee1\ufe0f AI Security",
+    "technicalScore": 9.15,
+    "originalityScore": 8.8,
+    "ambitionScore": 9.3,
+    "executionScore": 9.2,
+    "impactScore": 9.0,
+    "architectureScore": 9.4,
+    "finalMarketProb": 15.5,
+    "verdictLabel": "PESO PESADO DE INGENIER\u00cdA EN CLOUDFLARE EDGE Y RUNTIME AGENT DEFENSE",
+    "summary": "Plataforma de seguridad y firewall runtime para proteger startups contra vulnerabilidades de agentes de IA, fugas de variables de entorno y tablas Supabase sin RLS.",
+    "stack": [
+      "TypeScript",
+      "Cloudflare Workers",
+      "Cloudflare D1 SQL",
+      "Next.js",
+      "TailwindCSS",
+      "Python"
     ],
-    criticalFlaws: [
-      "Límite de tiempo de CPU de 50ms en Workers estándar exige recortar análisis semántico profundo"
+    "loc": 22400,
+    "implementationQuality": "Arquitectura distribuida en Cloudflare Edge con Workers serverless y base de datos SQL D1",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-22",
+    "keyStrengths": [
+      "Despliegue serverless global con latencias submilisegundo en edge",
+      "Threat modeling formal documentado y mitigaci\u00f3n activa de prompt injections",
+      "Auditor\u00eda automatizada de configuraciones cloud err\u00f3neas en repositorios"
     ],
-    penalties: {
-      originality: "Firewall e interceptor en el Edge para agentes de lenguaje.",
-      ambition: "Casi 100k LOC, multi-zona y testing riguroso.",
-      execution: "Despliegue operativo en officialvanguard.com; setup inicial denso.",
-      impact: "Gobernanza indispensable para agentes conectados a bases de datos y herramientas.",
-      technical: "Dominio avanzado de Workers y D1; latencia eventual por delegación a colas."
+    "criticalFlaws": [
+      "El panel web en Next.js es algo sobrio y t\u00e9cnico para usuarios no ingenieros",
+      "Integraciones de alerta limitadas principalmente a Webhooks y Discord"
+    ],
+    "penalties": {
+      "originality": "Soluciona el problema de moda (inseguridad de agentes creados con IA) con criterio devsecops.",
+      "ambition": "Muy alta ambici\u00f3n al proteger agentes en ejecuci\u00f3n y no solo c\u00f3digo est\u00e1tico.",
+      "execution": "Robusto, desplegado y probado contra escenarios reales de ataque.",
+      "impact": "Imprescindible para el ecosistema startup que ship\u00e9a r\u00e1pido sin auditar.",
+      "technical": "De las mejores arquitecturas Cloudflare Workers de la competencia."
     }
   },
   {
-    id: 24,
-    name: "Constancia",
-    track: "🤝 Trust",
-    technicalScore: 8.49,
-    originalityScore: 8.4,
-    ambitionScore: 8.6,
-    executionScore: 8.2,
-    impactScore: 8.5,
-    architectureScore: 8.7,
-    verdictLabel: "SOBERBIA IMPLEMENTACIÓN DE ESTÁNDARES CRIPTOGRÁFICOS W3C VC",
-    summary: "Consorcio descentralizado para emisión y revocación de credenciales verificables W3C 2.0 con consenso por quórum mayoritario y firmas Ed25519.",
-    stack: ["TypeScript", "Node.js", "Prisma", "Vitest", "Zod", "W3C VC 2.0"],
-    loc: 31196,
-    testsCount: 32,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-24",
-    keyStrengths: [
-      "Adhesión estricta al estándar W3C Verifiable Credentials 2.0 y Data Integrity",
-      "Quórum mayoritario de acreditación entre entidades miembro",
-      "32 tests E2E con Vitest y esquemas Zod en todas las fronteras de datos"
+    "id": 15,
+    "name": "Meshy",
+    "track": "\ud83d\udea8 Emergencias",
+    "technicalScore": 8.85,
+    "originalityScore": 9.3,
+    "ambitionScore": 9.4,
+    "executionScore": 8.5,
+    "impactScore": 9.2,
+    "architectureScore": 8.6,
+    "finalMarketProb": 10.6,
+    "verdictLabel": "TOP 4: RED MESH BLUETOOTH OFF-GRID PARA SITUACIONES DE CAT\u00c1STROFE",
+    "summary": "Sistema SOS de retransmisi\u00f3n celular sin conexi\u00f3n a internet ni telefon\u00eda: los paquetes de auxilio saltan de dispositivo en dispositivo v\u00eda Bluetooth Low Energy hasta tocar un nodo con red.",
+    "stack": [
+      "TypeScript",
+      "React",
+      "Web Bluetooth API",
+      "Capacitor",
+      "Node.js",
+      "Express"
     ],
-    criticalFlaws: [
-      "Consenso gestionado sobre base de datos relacional (Prisma) en vez de gossip protocol P2P"
+    "loc": 16900,
+    "implementationQuality": "Protocolo de enrutamiento oportunista BLE implementado en web y empaquetado h\u00edbrido con Capacitor",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-15",
+    "keyStrengths": [
+      "Resuelve un dolor cr\u00edtico real en pa\u00edses con apagones y fallas severas de telecomunicaciones",
+      "Manejo de estados de retransmisi\u00f3n store-and-forward en memoria local",
+      "Demo pr\u00e1ctica en vivo con m\u00faltiples dispositivos enlazados sin internet"
     ],
-    penalties: {
-      originality: "Consorcio con tolerancia a fallas bizantinas simplificada.",
-      ambition: "Ledger con quórum dinámico y especificaciones W3C.",
-      execution: "Verificación instantánea; curva de aprendizaje técnica para emisores.",
-      impact: "Combate la falsificación documental en certificados, diplomas y constancias.",
-      technical: "Ingeniería de software de primer nivel con Prisma y Ed25519."
+    "criticalFlaws": [
+      "Restricciones de iOS/Android para mantener sockets BLE activos indefinidamente en background",
+      "Rendimiento decreciente si la densidad de nodos es muy baja en zonas rurales"
+    ],
+    "penalties": {
+      "originality": "Uso brillante de Bluetooth peer-to-peer aplicado a defensa civil.",
+      "ambition": "Enorme m\u00e9rito al lidiar con hardware real y protocolos de radio en 36h.",
+      "execution": "La demo funcion\u00f3; persistieron peque\u00f1os retardos de propagaci\u00f3n entre saltos.",
+      "impact": "Impacto social inmenso y tracci\u00f3n natural en cualquier comunidad.",
+      "technical": "C\u00f3digo limpio y modularizado en monorepo de apps y backend puente."
     }
   },
   {
-    id: 15,
-    name: "Meshy",
-    track: "🤝 Trust",
-    technicalScore: 8.43,
-    originalityScore: 8.5,
-    ambitionScore: 8.9,
-    executionScore: 7.8,
-    impactScore: 8.8,
-    architectureScore: 8.2,
-    verdictLabel: "RED MESH DESCENTRALIZADA MUY AMBICIOSA; RETO EN BLE BACKGROUND",
-    summary: "Baliza SOS multi-salto sobre Bluetooth Low Energy que convierte teléfonos cercanos en una malla de retransmisión comunitaria sin internet.",
-    stack: ["TypeScript", "React", "Web Bluetooth API", "Capacitor", "Node.js"],
-    loc: 131281,
-    testsCount: 188,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-15",
-    keyStrengths: [
-      "188 tests que simulan grafos de red mesh de 50 nodos y particiones",
-      "Propagación epidémica con fragmentos de 13 bytes y control TTL",
-      "Deduplicación por hash SHA-256 para evitar tormentas de broadcast"
+    "id": 12,
+    "name": "Qubbot",
+    "track": "\ud83d\udee1\ufe0f AI Security",
+    "technicalScore": 8.7,
+    "originalityScore": 9.1,
+    "ambitionScore": 9.0,
+    "executionScore": 8.6,
+    "impactScore": 8.8,
+    "architectureScore": 8.5,
+    "finalMarketProb": 9.6,
+    "verdictLabel": "TOP 5: ENTORNO DE DESARROLLO VISUAL 3D CON AGENTES AUT\u00d3NOMOS",
+    "summary": "IDE revolucionario para no-programadores: representa repositorios como ciudades 3D donde cada m\u00f3dulo es un edificio y agentes aut\u00f3nomos coordinan cambios de c\u00f3digo explicados visualmente.",
+    "stack": [
+      "TypeScript",
+      "Electron",
+      "React",
+      "Three.js",
+      "Node.js",
+      "Vercel"
     ],
-    criticalFlaws: [
-      "Restricciones del sistema operativo móvil (iOS/Android) que apagan el escaneo BLE continuo en background"
+    "loc": 19500,
+    "implementationQuality": "Aplicaci\u00f3n de escritorio Electron con renderer 3D acoplado a un motor de agentes conversacionales",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-12",
+    "keyStrengths": [
+      "Met\u00e1fora de ciudad 3D de software muy atractiva visualmente para comunicar arquitectura",
+      "Integraci\u00f3n fluida de Electron con agentes locales que ejecutan scripts de refactor",
+      "Reconocimiento de mercado leg\u00edtimo (9.6% de probabilidad final en la hackathon)"
     ],
-    penalties: {
-      originality: "Baliza SOS de salto en salto sobre BLE sin dependencia de internet.",
-      ambition: "Protocolo mesh tolerante a fragmentación en un hackathon.",
-      execution: "La PWA emite beacons pero se suspende con la pantalla apagada por el SO.",
-      impact: "Vital para terremotos, deslaves o apagones masivos.",
-      technical: "Volumen masivo de código; requiere Foreground Service nativo."
+    "criticalFlaws": [
+      "Empaquetado pesado de Electron con consumo significativo de RAM",
+      "Dificultad de escalar la met\u00e1fora de la ciudad 3D a monorepos con miles de archivos"
+    ],
+    "penalties": {
+      "originality": "Excelente interfaz visual para democratizar la revisi\u00f3n de c\u00f3digo.",
+      "ambition": "Construir un IDE con Electron y Three.js en una hackathon es un reto masivo.",
+      "execution": "Demo s\u00f3lida en el escenario; fue injustamente ignorado por an\u00e1lisis previos.",
+      "impact": "Gran potencial de aceleraci\u00f3n para product managers y junior devs.",
+      "technical": "Estructura desacoplada entre proceso main de Electron y renderer React."
     }
   },
   {
-    id: 26,
-    name: "Tridi",
-    track: "🧊 Three-Dimensional",
-    technicalScore: 8.42,
-    originalityScore: 9.4,
-    ambitionScore: 9.5,
-    executionScore: 7.2,
-    impactScore: 9.1,
-    architectureScore: 7.5,
-    verdictLabel: "PIONEROS EN ROBÓTICA HUMANOIDE; PENALIZADO POR CERO TESTS",
-    summary: "Extracción cinemática 3D de personas a partir de video común de celular para simular y entrenar robots humanoides en física real (MuJoCo WASM).",
-    stack: ["Python", "JavaScript", "Three.js", "MediaPipe Heavy", "YOLOv11", "MuJoCo WASM"],
-    loc: 23266,
-    testsCount: 0,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-26",
-    keyStrengths: [
-      "Pipeline de visión dual de alto rendimiento (YOLOv11s-pose en 20ms + MediaPipe Heavy)",
-      "Simulador de física MuJoCo corriendo en WebAssembly dentro del navegador",
-      "Problema de frontera tecnológica y mercado multimillonario"
+    "id": 27,
+    "name": "Al\u00f3 Mam\u00e1",
+    "track": "\ud83d\udea8 Emergencias",
+    "technicalScore": 8.2,
+    "originalityScore": 7.8,
+    "ambitionScore": 8.2,
+    "executionScore": 8.4,
+    "impactScore": 8.0,
+    "architectureScore": 8.4,
+    "finalMarketProb": 1.6,
+    "verdictLabel": "APP NATIVA ANDROID ROBUSTA PERO RECHAZADA POR EL MERCADO POR BAJO IMPACTO DIFERENCIAL",
+    "summary": "Aplicaci\u00f3n Android en Kotlin con backend en Go para activar alertas discretas de socorro mediante combinaciones de botones f\u00edsicos y desv\u00edo a mensajer\u00eda de emergencia.",
+    "stack": [
+      "Kotlin (Android Nativo)",
+      "Go",
+      "BitChat BLE",
+      "WhatsApp API",
+      "Render"
     ],
-    criticalFlaws: [
-      "CERO tests automatizados en todo el repositorio",
-      "Factores de escala empíricos en cinemática inversa que causan inestabilidad articular"
+    "loc": 28400,
+    "implementationQuality": "C\u00f3digo m\u00f3vil nativo en Kotlin y backend concurrente en Go; inflado con tests de IA pero con poca tracci\u00f3n comercial",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-27",
+    "keyStrengths": [
+      "Implementaci\u00f3n Android nativa con acceso directo a sensores de hardware",
+      "Backend concurrente en Go con tiempos de respuesta muy r\u00e1pidos",
+      "Encriptaci\u00f3n asim\u00e9trica en el almacenamiento de contactos protegidos"
     ],
-    penalties: {
-      originality: "Conversión de video móvil en datasets de física para robots humanoides.",
-      ambition: "Abordar el cuello de botella mundial de datos de entrenamiento en robótica.",
-      execution: "Demo en Vercel llamativa, pero castigada severamente por tener 0 tests.",
-      impact: "Democratiza la captura de movimiento sin trajes MoCap de $50k.",
-      technical: "Algoritmos avanzados pero frágiles por falta de regresión y cobertura."
+    "criticalFlaws": [
+      "El mercado lo castig\u00f3 con apenas 1.6% de probabilidad: percepci\u00f3n de 'otra app de bot\u00f3n de p\u00e1nico'",
+      "Gran volumen de tests unitarios redundantes generados autom\u00e1ticamente que inflaban su auditor\u00eda est\u00e1tica previa"
+    ],
+    "penalties": {
+      "originality": "Propuesta convencional sin elementos de diferenciaci\u00f3n radical.",
+      "ambition": "Buena ingenier\u00eda tradicional, pero sin innovar en modelos generativos ni 3D.",
+      "execution": "La aplicaci\u00f3n funciona pero no gener\u00f3 entusiasmo en la audiencia.",
+      "impact": "El caso de uso est\u00e1 saturado por soluciones existentes del OS m\u00f3vil.",
+      "technical": "C\u00f3digo estructurado pero sobrecargado de boilerplate innecesario."
     }
   },
   {
-    id: 25,
-    name: "Presente",
-    track: "🚨 Emergencias",
-    technicalScore: 8.21,
-    originalityScore: 8.3,
-    ambitionScore: 8.0,
-    executionScore: 8.4,
-    impactScore: 8.7,
-    architectureScore: 7.8,
-    verdictLabel: "EJECUCIÓN IMPECABLE EN CAMPO CON CLASIFICACIÓN DE AUDIO ONNX",
-    summary: "Ficha médica de triaje rápido activada por QR y app Android nativa con clasificador de audio neuronal ONNX local para detectar gritos, rotura de vidrios o alarmas.",
-    stack: ["Kotlin", "Android Nativo", "ONNX Audio", "TypeScript", "Next.js", "Google Play"],
-    loc: 12038,
-    testsCount: 8,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-25",
-    keyStrengths: [
-      "Servicio Guardia.kt en Android nativo que procesa audio localmente sin subirlo a la nube",
-      "Publicación real en canal de prueba de Google Play",
-      "Disparo automático de sirena local y webhook a Telegram"
+    "id": 13,
+    "name": "Manito",
+    "track": "\ud83d\udea8 Emergencias",
+    "technicalScore": 7.7,
+    "originalityScore": 7.9,
+    "ambitionScore": 7.8,
+    "executionScore": 7.6,
+    "impactScore": 7.8,
+    "architectureScore": 7.5,
+    "finalMarketProb": 1.4,
+    "verdictLabel": "ASISTENTE DE SOCORRO POR VOZ CON ACCESO R\u00c1PIDO",
+    "summary": "Web app de emergencia con reconocimiento de voz y geolocalizaci\u00f3n para personas con movilidad reducida o en situaciones de asalto inminente.",
+    "stack": [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Web Speech API",
+      "Express"
     ],
-    criticalFlaws: [
-      "Tasa moderada de falsos positivos en audio doméstico y falta de cifrado en el QR médico"
+    "loc": 9800,
+    "implementationQuality": "Web app sencilla centrada en accesibilidad por voz y disparadores r\u00e1pidos",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-13",
+    "keyStrengths": [
+      "Interfaz minimalista orientada a usuarios no t\u00e9cnicos en situaciones de p\u00e1nico",
+      "Detecci\u00f3n de palabras clave en el navegador"
     ],
-    penalties: {
-      originality: "Ficha de triaje y escucha preventiva con modelos neuronales en el borde.",
-      ambition: "Asegurar datos médicos vitales en 5 segundos y vigilancia acústica.",
-      execution: "App funcional en Google Play y múltiples escenarios testeados.",
-      impact: "Minutos de oro salvados en rescates de emergencia.",
-      technical: "Balance móvil y web sólido; requiere firma digital en el QR médico."
+    "criticalFlaws": [
+      "Falsa activaci\u00f3n por ruido ambiente",
+      "Falta de persistencia offline robusta"
+    ],
+    "penalties": {
+      "originality": "Aporte loable en accesibilidad, pero sin novedad algor\u00edtmica.",
+      "ambition": "Alcance acotado a un formulario asistido por voz.",
+      "execution": "Funcional durante la demo b\u00e1sica.",
+      "impact": "Relevante para casos espec\u00edficos de discapacidad motora.",
+      "technical": "Estructura frontend est\u00e1ndar sin capa de abstracci\u00f3n compleja."
     }
   },
   {
-    id: 10,
-    name: "Prais",
-    track: "🤝 Trust",
-    technicalScore: 8.11,
-    originalityScore: 8.0,
-    ambitionScore: 8.4,
-    executionScore: 7.9,
-    impactScore: 8.5,
-    architectureScore: 7.8,
-    verdictLabel: "TRANSPARENCIA PÚBLICA CON SCRAPING DE LICITACIONES Y LLMS",
-    summary: "Auditoría ciudadana que extrae licitaciones oficiales con Firecrawl y las compara con precios de mercado abiertos mediante modelos de OpenAI.",
-    stack: ["TypeScript", "Python", "Next.js", "Firecrawl", "OpenAI", "Supabase"],
-    loc: 25657,
-    testsCount: 23,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-10",
-    keyStrengths: [
-      "Pipeline de ingesta documental conectado a usaprais.com",
-      "Comparativa automática de partidas presupuestarias contra catálogo de precios",
-      "23 tests de endpoints y parsing"
+    "id": 20,
+    "name": "SmartTraffic",
+    "track": "\ud83e\udd1d Trust",
+    "technicalScore": 7.8,
+    "originalityScore": 7.8,
+    "ambitionScore": 8.0,
+    "executionScore": 7.7,
+    "impactScore": 7.9,
+    "architectureScore": 7.6,
+    "finalMarketProb": 1.4,
+    "verdictLabel": "AUDITOR\u00cdA DE TR\u00c1FICO CON VISI\u00d3N VECTORIAL Y DETECCI\u00d3N DE INFRACCIONES",
+    "summary": "Sistema c\u00edvico de an\u00e1lisis de video con Computer Vision (YOLO y OpenCV) para auditar cruces de sem\u00e1foro en rojo y generar reportes transparentes de movilidad urbana.",
+    "stack": [
+      "Python (YOLO / OpenCV)",
+      "TypeScript",
+      "React Native",
+      "PostgreSQL",
+      "Prisma"
     ],
-    criticalFlaws: [
-      "Agotamiento de cuotas y bloqueos 429 en la API de Firecrawl"
+    "loc": 11300,
+    "implementationQuality": "Pipeline de inferencia sobre fotogramas de video con c\u00e1lculo vectorial de cruce de l\u00ednea",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-20",
+    "keyStrengths": [
+      "Resoluci\u00f3n matem\u00e1tica limpia de vectores de cruce de l\u00ednea de parada",
+      "Dashboard para visualizaci\u00f3n de infractores y estad\u00edsticas c\u00edvicas"
     ],
-    penalties: {
-      originality: "Fiscalización algorítmica de compras públicas.",
-      ambition: "Ingesta masiva de compras estatales y reconciliación semántica.",
-      execution: "Desplegado en usaprais.com; errores 429 por límite de cuota en scraping.",
-      impact: "Gran valor cívico contra el sobreprecio en contrataciones.",
-      technical: "Híbrido Python/TS bien planteado; OCR sensible a PDFs torcidos."
+    "criticalFlaws": [
+      "Muy sensible a la calibraci\u00f3n manual del \u00e1ngulo de la c\u00e1mara fija",
+      "Baja tracci\u00f3n en el mercado de predicci\u00f3n (1.4%)"
+    ],
+    "penalties": {
+      "originality": "Caso de uso cl\u00e1sico de visi\u00f3n computacional.",
+      "ambition": "Buena integraci\u00f3n de backend de inferencia con visualizador.",
+      "execution": "Los videos de prueba procesaron bien; falta testeo en tr\u00e1fico nocturno.",
+      "impact": "Utilidad municipal genuina si se logra homologaci\u00f3n oficial.",
+      "technical": "C\u00f3digo Python limpio con manejo vectorial correcto en NumPy."
     }
   },
   {
-    id: 20,
-    name: "SmartTraffic",
-    track: "🤝 Trust",
-    technicalScore: 8.05,
-    originalityScore: 8.1,
-    ambitionScore: 8.3,
-    executionScore: 7.6,
-    impactScore: 8.4,
-    architectureScore: 7.9,
-    verdictLabel: "FOTOMULTAS INTELIGENTES CON YOLO; SENSIBLE A VIBRACIÓN",
-    summary: "Convierte teléfonos fijos en semáforos en cámaras de fiscalización vial, detectando cruces de luz roja con cálculo vectorial de intersección y clip de video probatorio.",
-    stack: ["TypeScript", "Python", "YOLO", "OpenCV", "PostgreSQL", "Prisma"],
-    loc: 32898,
-    testsCount: 85,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-20",
-    keyStrengths: [
-      "85 tests unitarios en Vitest con fixtures vectoriales y reglas de negocio",
-      "Tracking de cajas delimitadoras con OpenCV y generación de evidencia en video",
-      "Integración de pasarela de pago para infractores"
+    "id": 23,
+    "name": "HAWK",
+    "track": "\ud83d\udee1\ufe0f AI Security",
+    "technicalScore": 8.1,
+    "originalityScore": 8.2,
+    "ambitionScore": 8.4,
+    "executionScore": 7.9,
+    "impactScore": 7.8,
+    "architectureScore": 8.3,
+    "finalMarketProb": 1.1,
+    "verdictLabel": "GUARDI\u00c1N DE SEGURIDAD EN RUST CON MONOREPO DE DETECCI\u00d3N EN EDGE",
+    "summary": "Suite de auditor\u00eda y proxy en Rust para interceptar llamadas LLM en tiempo real, filtrar credenciales y proteger daemons de ejecuci\u00f3n contra inyecciones de agentes maliciosos.",
+    "stack": [
+      "Rust",
+      "Cargo",
+      "Docker",
+      "LLM-Proxy",
+      "Tokio"
     ],
-    criticalFlaws: [
-      "Coordenadas de parada fijas que se desalinean si el viento hace vibrar el poste de la cámara"
+    "loc": 17800,
+    "implementationQuality": "Monorepo en Rust de alto rendimiento con guardian-core, edge-net y proxy de llamadas LLM",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-23",
+    "keyStrengths": [
+      "Escrito en Rust con seguridad de memoria y cero costo de abstracci\u00f3n",
+      "M\u00f3dulos desacoplados: daemon de host, detector de anomal\u00edas y proxy de red",
+      "Injustamente catalogado como repo vac\u00edo en auditor\u00edas iniciales desactualizadas"
     ],
-    penalties: {
-      originality: "Transformar smartphones en fiscalizadores viales de bajo costo.",
-      ambition: "Detección, LPR en el borde y pasarela de cobro unificada.",
-      execution: "Procesa bien los clips; efectividad baja bajo lluvia nocturna.",
-      impact: "Orden vial urgente y recaudación municipal transparente.",
-      technical: "Matemática vectorial sólida; requiere auto-calibración de línea de parada."
+    "criticalFlaws": [
+      "Curva empinada de adopci\u00f3n y configuraci\u00f3n para usuarios que no compilan Rust",
+      "Mercado final muy bajo (1.1%) por complejidad t\u00e9cnica ajena a la audiencia general"
+    ],
+    "penalties": {
+      "originality": "Enfoque de ciberseguridad a nivel de sistema operativo y sockets.",
+      "ambition": "Construir proxies en Rust en 36h demuestra capacidad t\u00e9cnica seria.",
+      "execution": "Compila y corre benchmarks locales de latencia.",
+      "impact": "Herramienta de nicho para devops e infraestructura cr\u00edtica.",
+      "technical": "Uso idiom\u00e1tico de Rust con control de errores tipados."
     }
   },
   {
-    id: 5,
-    name: "mus3o",
-    track: "🧊 Three-Dimensional",
-    technicalScore: 7.65,
-    originalityScore: 7.5,
-    ambitionScore: 8.0,
-    executionScore: 7.8,
-    impactScore: 6.8,
-    architectureScore: 8.0,
-    verdictLabel: "PALACIO DE MEMORIA CON SHADERS; PECADO DE FEATURE-STUFFING",
-    summary: "Entorno 3D navegable que transforma apuntes en habitaciones espaciales y aplica shaders de degradación cromática para simular el olvido mnemotécnico.",
-    stack: ["TypeScript", "Next.js", "Three.js", "React Three Fiber", "TailwindCSS"],
-    loc: 43990,
-    testsCount: 106,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-5",
-    keyStrengths: [
-      "Shaders GLSL elegantes que disuelven objetos según el paso del tiempo sin repasar",
-      "106 tests unitarios en el paquete dungeon-core",
-      "Navegación espacial fluida con React Three Fiber"
+    "id": 14,
+    "name": "ZeroID",
+    "track": "\ud83e\udd1d Trust",
+    "technicalScore": 7.6,
+    "originalityScore": 7.6,
+    "ambitionScore": 7.6,
+    "executionScore": 7.5,
+    "impactScore": 7.4,
+    "architectureScore": 7.7,
+    "finalMarketProb": 0.8,
+    "verdictLabel": "IDENTIDAD SOBERANA Y FIRMAS ED25519 PARA PASAJES DE AUTOB\u00daS",
+    "summary": "Protocolo de divulgaci\u00f3n selectiva de identidad aplicado a la compra y validaci\u00f3n de boletos interurbanos en 'Expreso Caribe' con criptograf\u00eda Ed25519.",
+    "stack": [
+      "TypeScript",
+      "Next.js",
+      "TailwindCSS",
+      "Ed25519",
+      "Vercel"
     ],
-    criticalFlaws: [
-      "Feature-stuffing: inclusión de mazmorras medievales y A* ajenos al estudio mnemotécnico",
-      "API externa de Poly Pizza rota en producción (403)"
+    "loc": 14200,
+    "implementationQuality": "Frontend Next.js con validaci\u00f3n de firmas digitales asim\u00e9tricas",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-14",
+    "keyStrengths": [
+      "Caso de uso concreto de identidad sin requerir blockchain pesada",
+      "Interfaz clara y bien dise\u00f1ada para el pasajero"
     ],
-    penalties: {
-      originality: "Degradación en shader genial; pero mecánica básica de galería 3D.",
-      ambition: "Cayeron en feature-stuffing con A* y dungeon-core innecesarios.",
-      execution: "1.000 tests sí, pero Poly Pizza roto en prod (403) y fotos volátiles.",
-      impact: "Caminar a 1.7 m/s en 3D es más lento que Anki para memorizar.",
-      technical: "Shaders de alto nivel; DSL con regex frágiles y sin tests E2E de WebGL."
+    "criticalFlaws": [
+      "La demo completa depend\u00eda de repositorios fragmentados fuera del monorepo",
+      "Poca adopci\u00f3n por parte del mercado (0.8%)"
+    ],
+    "penalties": {
+      "originality": "Buena contextualizaci\u00f3n de identidad digital al transporte p\u00fablico local.",
+      "ambition": "Moderada; el flujo es similar a un QR firmado convencional.",
+      "execution": "Pudo demostrarse en pantalla.",
+      "impact": "Reducci\u00f3n de fraudes en taquillas interurbanas.",
+      "technical": "C\u00f3digo TypeScript limpio con esquema de validaci\u00f3n Zod."
     }
   },
   {
-    id: 14,
-    name: "ZeroID",
-    track: "🤝 Trust",
-    technicalScore: 7.58,
-    originalityScore: 7.6,
-    ambitionScore: 7.8,
-    executionScore: 7.5,
-    impactScore: 7.4,
-    architectureScore: 7.6,
-    verdictLabel: "IDENTIDAD SOBERANA PRÁCTICA EN PASAJES DE AUTOBÚS",
-    summary: "Billetera digital para divulgación selectiva de identidad aplicada a la compra y abordaje de pasajes interurbanos en 'Expreso Caribe'.",
-    stack: ["TypeScript", "Next.js", "TailwindCSS", "Ed25519", "Vercel"],
-    loc: 14261,
-    testsCount: 15,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-14",
-    keyStrengths: [
-      "Caso de uso concreto de abordaje de pasajeros sin compartir cédula completa",
-      "Flujo de checkout integrado y 15 tests criptográficos",
-      "UI limpia en Next.js App Router"
+    "id": 21,
+    "name": "Veridian",
+    "track": "\ud83d\udee1\ufe0f AI Security",
+    "technicalScore": 7.1,
+    "originalityScore": 7.5,
+    "ambitionScore": 7.8,
+    "executionScore": 6.8,
+    "impactScore": 7.0,
+    "architectureScore": 6.5,
+    "finalMarketProb": 0.8,
+    "verdictLabel": "PROPUESTA DE SEGURIDAD CON REPO OFICIAL INCOMPLETO Y HYPE ARTIFICIAL",
+    "summary": "Plataforma de auditor\u00eda de seguridad para modelos de IA; gener\u00f3 expectativa en el pitch pero mantuvo su backend cerrado y sin verificar en el repositorio de la organizaci\u00f3n.",
+    "stack": [
+      "Python",
+      "FastAPI",
+      "Render",
+      "PostgreSQL"
     ],
-    criticalFlaws: [
-      "Fragmentaron la demo de Expreso Caribe a otro repositorio, rompiendo la trazabilidad del código"
+    "loc": 6100,
+    "implementationQuality": "Documentaci\u00f3n y pitch pulidos pero con implementaci\u00f3n opaca en repositorios privados",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-21",
+    "keyStrengths": [
+      "Pitch persuasivo con narrativa de compliance regulatorio para empresas",
+      "Presentaci\u00f3n comercial de alto impacto visual"
     ],
-    penalties: {
-      originality: "Identidad selectiva aplicada al transporte de pasajeros.",
-      ambition: "Solucionar la verificación obligatoria sin ceder datos personales.",
-      execution: "Checkout funcional en Vercel; validación criptográfica en cliente.",
-      impact: "Útil ante alcabalas de control de identidad en rutas nacionales.",
-      technical: "Estructura limpia pero dividieron el repo para la demo."
+    "criticalFlaws": [
+      "Ejemplo claro de 'acciones infladas artificialmente' que luego colapsaron a 0.8%",
+      "Gran parte del c\u00f3digo fuente no estaba disponible en el repo oficial auditado"
+    ],
+    "penalties": {
+      "originality": "Narrativa ejecutiva elegante.",
+      "ambition": "Prometi\u00f3 an\u00e1lisis est\u00e1tico profundo que no se evidenci\u00f3 en el c\u00f3digo abierto.",
+      "execution": "Demo mayormente simulada con datos mocked.",
+      "impact": "Alto en papel, nulo en verificaci\u00f3n de c\u00f3digo.",
+      "technical": "Severamente penalizado por opacidad en la entrega."
     }
   },
   {
-    id: 13,
-    name: "Manito",
-    track: "🚨 Emergencias",
-    technicalScore: 7.52,
-    originalityScore: 7.8,
-    ambitionScore: 7.6,
-    executionScore: 7.2,
-    impactScore: 8.2,
-    architectureScore: 7.0,
-    verdictLabel: "CENSO POR VOZ EMPÁTICO; DEPENDE DE CONEXIÓN A INTERNET",
-    summary: "Asistente de voz que entrevista a damnificados post-desastre para relevar sus oficios y conectarlos inmediatamente con trabajos de reconstrucción en Impaktemos.",
-    stack: ["TypeScript", "React", "Node.js", "Web Speech API", "Express"],
-    loc: 5698,
-    testsCount: 10,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-13",
-    keyStrengths: [
-      "Enfoque de dignidad económica y reactivación laboral post-crisis",
-      "Interacción fluida por voz natural",
-      "10 tests de serialización en el backend"
+    "id": 16,
+    "name": "Mapz",
+    "track": "\ud83e\uddca Three-Dimensional",
+    "technicalScore": 7.4,
+    "originalityScore": 7.8,
+    "ambitionScore": 8.0,
+    "executionScore": 7.2,
+    "impactScore": 7.3,
+    "architectureScore": 7.3,
+    "finalMarketProb": 0.7,
+    "verdictLabel": "VISUALIZADOR AR Y MAPAS ESPACIALES 3D PARA NAVEGACI\u00d3N",
+    "summary": "Experiencia de navegaci\u00f3n tridimensional que superpone rutas y puntos de inter\u00e9s urbano en canvas 3D interactivo con Three.js.",
+    "stack": [
+      "TypeScript",
+      "Vite",
+      "Three.js",
+      "WebGL",
+      "Supabase"
     ],
-    criticalFlaws: [
-      "Requiere conexión continua a Internet que suele estar caída en catástrofes"
+    "loc": 12100,
+    "implementationQuality": "Prototipo en Three.js con visualizaci\u00f3n de modelos 3D y capas de mapas",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-16",
+    "keyStrengths": [
+      "Carga y renderizado de mallas urbanas en WebGL",
+      "Mapeo de coordenadas GPS a coordenadas locales de escena 3D"
     ],
-    penalties: {
-      originality: "Censo por voz conversacional con colocación laboral inmediata.",
-      ambition: "Reactivación comunitaria desde el empleo y no solo la beneficencia.",
-      execution: "Demo fluida pero no tolera modo avión o cortes de señal celular.",
-      impact: "Impacto humano conmovedor y reconstructor.",
-      technical: "Ligero pero sin almacenamiento local offline-first (IndexedDB)."
+    "criticalFlaws": [
+      "Problemas de escala y rendimiento en escenas complejas con muchos edificios",
+      "Mercado residual de 0.7%"
+    ],
+    "penalties": {
+      "originality": "Visualizaci\u00f3n 3D atractiva de mapas.",
+      "ambition": "Importante desaf\u00edo geom\u00e9trico al proyectar curvas de nivel.",
+      "execution": "Lags visibles al hacer zoom r\u00e1pido en la c\u00e1mara.",
+      "impact": "Aplicable a recorridos universitarios o tur\u00edsticos.",
+      "technical": "C\u00f3digo Vite est\u00e1ndar con integraci\u00f3n directa de Three.js."
     }
   },
   {
-    id: 2,
-    name: "Arvi",
-    track: "🤝 Trust",
-    technicalScore: 7.28,
-    originalityScore: 8.2,
-    ambitionScore: 7.5,
-    executionScore: 7.2,
-    impactScore: 6.8,
-    architectureScore: 7.0,
-    verdictLabel: "GUÍA TURÍSTICO 3D CON IA; RETOS DE LATENCIA DE VOZ",
-    summary: "Guía turístico interactivo que sitúa próceres en 3D en monumentos caraqueños y conversa por voz en streaming, activando escenas de batalla y visión con la cámara.",
-    stack: ["Python", "FastAPI", "React Native", "Three.js", "Whisper", "TTS"],
-    loc: 12256,
-    testsCount: 8,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-2",
-    keyStrengths: [
-      "Orquestación streaming que sintetiza audio frase por frase en paralelo al LLM",
-      "Disparo de escenas [ESCENA:batalla] y preguntas visuales LookEvent",
-      "Modelos 3D de personajes históricos"
+    "id": 3,
+    "name": "Qu\u00f3rum",
+    "track": "\ud83e\udd1d Trust",
+    "technicalScore": 7.5,
+    "originalityScore": 7.7,
+    "ambitionScore": 7.9,
+    "executionScore": 7.4,
+    "impactScore": 7.2,
+    "architectureScore": 7.5,
+    "finalMarketProb": 0.6,
+    "verdictLabel": "GOBERNANZA CRIPTOGR\u00c1FICA Y CONSENSO CON SMART CONTRACTS",
+    "summary": "Protocolo de votaci\u00f3n y gobernanza con firmas el\u00edpticas (ECC) y contratos inteligentes para decisiones grupales inmutables.",
+    "stack": [
+      "Solidity",
+      "TypeScript",
+      "Next.js",
+      "pnpm-workspace",
+      "Hardhat"
     ],
-    criticalFlaws: [
-      "Assets 3D muy pesados para redes 4G lentas y latencia inicial de respuesta >3.5s"
+    "loc": 13400,
+    "implementationQuality": "Monorepo con contratos Solidity, tests de consenso y suite de despliegue",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-3",
+    "keyStrengths": [
+      "Contratos con pruebas de firma de qu\u00f3rum multifirma",
+      "Monorepo configurado con pnpm y especificaciones de seguridad"
     ],
-    penalties: {
-      originality: "Avatares históricos 3D conversacionales en sitios patrimoniales.",
-      ambition: "Integrar visión, geolocalización, avatares y TTS en móvil.",
-      execution: "Modelos 3D pesados y latencias altas en el primer audio.",
-      impact: "Culturalmente valioso; sacar el teléfono en la calle en Caracas impone riesgo.",
-      technical: "FastAPI y React bien compuestos; audio no usa WebSockets bidireccionales."
+    "criticalFlaws": [
+      "Fricci\u00f3n de billeteras Web3 para el usuario com\u00fan",
+      "Apenas 0.6% de probabilidad de mercado"
+    ],
+    "penalties": {
+      "originality": "Esquema criptogr\u00e1fico probado.",
+      "ambition": "Implementar contratos y frontend coordinado en 36h.",
+      "execution": "Complet\u00f3 despliegues en testnet local.",
+      "impact": "Limitado a comunidades DAO o cooperativas t\u00e9cnicas.",
+      "technical": "Monorepo limpio con buenas pr\u00e1cticas de pnpm."
     }
   },
   {
-    id: 16,
-    name: "Vía AR",
-    track: "🧊 Three-Dimensional",
-    technicalScore: 7.25,
-    originalityScore: 8.0,
-    ambitionScore: 8.2,
-    executionScore: 6.2,
-    impactScore: 7.0,
-    architectureScore: 7.1,
-    verdictLabel: "NAVEGACIÓN URBANA AR; GRAN SPEC PERO PROTOTIPO INCOMPLETO",
-    summary: "Navegación peatonal aumentada con mallas 3D de relieve urbano real para evitar que las indicaciones atraviesen edificios o desniveles.",
-    stack: ["TypeScript", "Vite", "Three.js", "WebGL", "Supabase", "Python"],
-    loc: 11318,
-    testsCount: 3,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-16",
-    keyStrengths: [
-      "Documentación y especificación matemática de vanguardia (SPEC-3D-STREETS.md)",
-      "Coordenadas ENU locales y carga de chunks de 50 metros",
-      "Occluder shader para ocultar la ruta detrás de fachadas reales"
+    "id": 26,
+    "name": "Tridi",
+    "track": "\ud83e\uddca Three-Dimensional",
+    "technicalScore": 8.4,
+    "originalityScore": 9.4,
+    "ambitionScore": 9.6,
+    "executionScore": 7.4,
+    "impactScore": 8.0,
+    "architectureScore": 8.2,
+    "finalMarketProb": 0.5,
+    "verdictLabel": "ALTA AMBICI\u00d3N CIENT\u00cdFICA EN F\u00cdSICA WASM Y ROB\u00d3TICA, PERO SIN TRACCI\u00d3N DE MERCADO",
+    "summary": "Plataforma de entrenamiento para robots humanoides a partir de video de celular combinando YOLOv11 pose, MediaPipe Heavy y f\u00edsica simulada en WebAssembly con MuJoCo.",
+    "stack": [
+      "Python",
+      "Three.js",
+      "MediaPipe Pose",
+      "YOLOv11",
+      "MuJoCo WASM",
+      "WebGL"
     ],
-    criticalFlaws: [
-      "Solo 3 tests y el pipeline de fotogrametría no alcanzó automatización"
+    "loc": 24100,
+    "implementationQuality": "Pipeline h\u00edbrido de computer vision con simulaci\u00f3n f\u00edsica WASM en el navegador",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-26",
+    "keyStrengths": [
+      "Nivel t\u00e9cnico de frontera: MuJoCo compilado a WebAssembly en web",
+      "Extracci\u00f3n cinem\u00e1tica de articulaciones en tiempo casi real"
     ],
-    penalties: {
-      originality: "Reconstrucción 3D para oclusión y rasante real en calles.",
-      ambition: "Especificación técnica sumamente profesional y detallada.",
-      execution: "La implementación práctica quedó rezagada respecto al diseño teórico.",
-      impact: "Útil en ciudades con pendientes pronunciadas; requiere captura masiva.",
-      technical: "Three.js bien configurado; falta fusionar IMU para estabilizar la cámara."
+    "criticalFlaws": [
+      "El mercado lo ignor\u00f3 por completo (0.5%): producto demasiado abstracto y complejo para el p\u00fablico de la hackathon",
+      "Consumo brutal de CPU/GPU en navegadores convencionales"
+    ],
+    "penalties": {
+      "originality": "De los proyectos con mayor originalidad cient\u00edfica de todo el evento.",
+      "ambition": "Intentar rob\u00f3tica y f\u00edsica de cuerpos r\u00edgidos en 36h.",
+      "execution": "Demos pesadas con ca\u00eddas de framerate notorias.",
+      "impact": "Fascinante para investigaci\u00f3n, lejano de uso masivo.",
+      "technical": "Integraci\u00f3n compleja de WebAssembly con WebGL."
     }
   },
   {
-    id: 1,
-    name: "sIsA",
-    track: "🤝 Trust",
-    technicalScore: 7.19,
-    originalityScore: 7.2,
-    ambitionScore: 7.8,
-    executionScore: 6.5,
-    impactScore: 7.0,
-    architectureScore: 7.4,
-    verdictLabel: "IDENTIDAD CIEGA CON HARDWARE ESP32; ALTA FRICCIÓN DE ADOPCIÓN",
-    summary: "Protocolo de autenticación anónima con atributos firmados en ECDSA P-256 e integración con microcontroladores ESP32 para lectura de tarjetas.",
-    stack: ["Go", "pgx/v5", "SvelteKit", "TypeScript", "ESP32 C++", "PostgreSQL"],
-    loc: 16978,
-    testsCount: 28,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-1",
-    keyStrengths: [
-      "Backend en Go concurrente con pool de conexiones pgx/v5 impecable",
-      "Firmas crudas IEEE P1363 (r || s) sobre curvas elípticas",
-      "28 tests con fuzzing y serialización de bytes"
+    "id": 8,
+    "name": "Arkangel",
+    "track": "\ud83d\udee1\ufe0f AI Security",
+    "technicalScore": 7.0,
+    "originalityScore": 7.2,
+    "ambitionScore": 7.4,
+    "executionScore": 6.9,
+    "impactScore": 7.0,
+    "architectureScore": 6.8,
+    "finalMarketProb": 0.4,
+    "verdictLabel": "DEFENSA DE AGENTES V\u00cdA ELECTRON CON T\u00c9CNICAS INTRUSIVAS DE INSPECCI\u00d3N",
+    "summary": "Herramienta de escritorio para auditar agentes conversacionales interceptando peticiones con Chrome DevTools Protocol y evaluando riesgos con Anthropic API.",
+    "stack": [
+      "JavaScript",
+      "Python",
+      "Electron",
+      "Next.js",
+      "Anthropic API"
     ],
-    criticalFlaws: [
-      "Exige hardware físico ESP32 conectado por serial, imposibilitando adopción masiva sin lector"
+    "loc": 10500,
+    "implementationQuality": "App Electron con inspecci\u00f3n CDP y wrappers de evaluaci\u00f3n de prompts",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-8",
+    "keyStrengths": [
+      "Panel de control para inspeccionar payloads JSON de agentes",
+      "Integraci\u00f3n de modelos para categorizar riesgos"
     ],
-    penalties: {
-      originality: "Identidades ciegas saladas sobre microcontrolador ESP32.",
-      ambition: "Abarcar hardware, backend Go, frontend Svelte y PWA dispersó el foco.",
-      execution: "Requiere hardware físico; demo web depende de mocks locales.",
-      impact: "Pedir un lector ESP32 a cada comercio es inviable logísticamente.",
-      technical: "Go muy limpio; llaves privadas de prueba en repo y esquema no estándar."
+    "criticalFlaws": [
+      "Dependencia de Chrome DevTools Protocol que lo hace fr\u00e1gil ante cambios de versi\u00f3n",
+      "Tracci\u00f3n nula en el mercado (0.4%)"
+    ],
+    "penalties": {
+      "originality": "Concepto est\u00e1ndar de proxy / sniffer de tr\u00e1fico de red.",
+      "ambition": "Media; muchas piezas pegadas con scripts superficiales.",
+      "execution": "Inestable si se pierde la conexi\u00f3n de debugging.",
+      "impact": "Bajo frente a proxies nativos como HAWK o VanGUARD.",
+      "technical": "Acoplamiento excesivo entre Electron y scripts de Python."
     }
   },
   {
-    id: 28,
-    name: "Rastro",
-    track: "🤝 Trust",
-    technicalScore: 6.85,
-    originalityScore: 7.3,
-    ambitionScore: 7.5,
-    executionScore: 6.5,
-    impactScore: 7.5,
-    architectureScore: 6.0,
-    verdictLabel: "ESCROW EN BASE SEPOLIA; PENALIZADO POR CERO TESTS EN SOLIDITY",
-    summary: "Donaciones en custodia on-chain liberadas a fundaciones por tramos una vez que cargan facturas respaldatorias aprobadas.",
-    stack: ["Solidity", "Base Sepolia", "Viem", "TypeScript", "React", "Supabase"],
-    loc: 1850,
-    testsCount: 0,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-28",
-    keyStrengths: [
-      "Contrato de custodia en Base Sepolia operativo",
-      "Frontend moderno con Viem y Tailwind",
-      "Intención clara de transparencia en donaciones"
+    "id": 1,
+    "name": "sIsA",
+    "track": "\ud83e\udd1d Trust",
+    "technicalScore": 7.3,
+    "originalityScore": 7.5,
+    "ambitionScore": 7.6,
+    "executionScore": 7.2,
+    "impactScore": 7.1,
+    "architectureScore": 7.3,
+    "finalMarketProb": 0.4,
+    "verdictLabel": "C\u00c9DULA ELECTR\u00d3NICA Y HARDWARE IOT CON ENCRIPTACI\u00d3N EN ESP32",
+    "summary": "Identidad segura que combina hardware embebido ESP32 en C++ con backend en Go y frontend SvelteKit para validaci\u00f3n an\u00f3nima de credenciales.",
+    "stack": [
+      "Go",
+      "SvelteKit",
+      "TypeScript",
+      "ESP32 C++",
+      "PostgreSQL",
+      "Docker"
     ],
-    criticalFlaws: [
-      "CERO tests automatizados en los contratos inteligentes de Solidity",
-      "Aprobación de facturas manual por admin en Supabase (punto único de centralización)"
+    "loc": 15600,
+    "implementationQuality": "Fusi\u00f3n de firmware C++ para microcontroladores con backend Go y contenedor Docker",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-1",
+    "keyStrengths": [
+      "Integraci\u00f3n de hardware f\u00edsico ESP32 funcionando en vivo",
+      "Backend concurrente en Go con drivers pgx/v5 optimizados"
     ],
-    penalties: {
-      originality: "Fondos en custodia con liberación por hitos de facturación.",
-      ambition: "Exigir rendición de cuentas on-chain antes de desembolsar.",
-      execution: "Despliegue funcional; aprobación manual rompe la promesa descentralizada.",
-      impact: "Recupera la confianza en causas benéficas.",
-      technical: "1.8k LOC mínimas; sin tests en Foundry/Hardhat ni oráculos descentralizados."
+    "criticalFlaws": [
+      "Fricci\u00f3n de adopci\u00f3n severa al requerir dispositivos f\u00edsicos dedicados",
+      "Volumen de mercado testimonial (0.4%)"
+    ],
+    "penalties": {
+      "originality": "Excelente iniciativa de conectar hardware libre con web.",
+      "ambition": "Flashing de microcontroladores y sincronizaci\u00f3n en 36h.",
+      "execution": "La demo de lectura de credenciales oper\u00f3 bien.",
+      "impact": "Dificultad de escalar sin fabricaci\u00f3n de hardware masiva.",
+      "technical": "Buen dominio de C++ embebido y Go."
     }
   },
   {
-    id: 8,
-    name: "Arkangel",
-    track: "🛡️ AI Security",
-    technicalScore: 6.36,
-    originalityScore: 6.8,
-    ambitionScore: 6.5,
-    executionScore: 6.0,
-    impactScore: 6.2,
-    architectureScore: 6.4,
-    verdictLabel: "CENTINELA EN ELECTRON; FRÁGIL POR ACOPLAMIENTO A CDP",
-    summary: "Aplicación de escritorio Electron que inspecciona peticiones de navegador vía Chrome DevTools Protocol para interceptar prompt injections dirigidos a LLMs.",
-    stack: ["JavaScript", "Electron", "Python", "Anthropic API"],
-    loc: 7445,
-    testsCount: 13,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-8",
-    keyStrengths: [
-      "Uso de Chrome DevTools Protocol para monitoreo de campos de texto",
-      "13 tests de evaluación de prompt",
-      "Panel de alertas en Electron"
+    "id": 25,
+    "name": "Presente",
+    "track": "\ud83d\udea8 Emergencias",
+    "technicalScore": 7.6,
+    "originalityScore": 7.5,
+    "ambitionScore": 7.7,
+    "executionScore": 7.8,
+    "impactScore": 7.4,
+    "architectureScore": 7.6,
+    "finalMarketProb": 0.3,
+    "verdictLabel": "DETECCI\u00d3N AC\u00daSTICA DE EMERGENCIAS CON INFERENCIA ONNX EN ANDROID",
+    "summary": "App Android nativa que analiza audio ambiental con modelos ONNX para detectar disparos o gritos de auxilio y alertar autom\u00e1ticamente a redes familiares.",
+    "stack": [
+      "Kotlin (Android Nativo)",
+      "Python (ONNX)",
+      "Next.js",
+      "TypeScript",
+      "Google Play"
     ],
-    criticalFlaws: [
-      "Extrema fragilidad: si el navegador no se lanza con flags de depuración remota, el sistema no funciona"
+    "loc": 14700,
+    "implementationQuality": "Inferencia de red neuronal ac\u00fastica optimizada para dispositivos Android nativos",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-25",
+    "keyStrengths": [
+      "Inferencia de audio on-device sin enviar streams continuos al servidor",
+      "App compilada y testeada en dispositivos reales"
     ],
-    penalties: {
-      originality: "Proxy de escritorio para interceptar prompts maliciosos.",
-      ambition: "Quisieron montar un firewall para LLMs en un sprint corto.",
-      execution: "Timeouts y reglas estáticas de palabras clave eludibles fácilmente.",
-      impact: "Un filtro por regex es fácilmente sorteable con base64 o leetspeak.",
-      technical: "Python monolítico y dependencia invasiva del puerto de depuración de Chrome."
+    "criticalFlaws": [
+      "Falsos positivos con ruidos urbanos y alto drenaje de bater\u00eda",
+      "El mercado no apost\u00f3 por ella (0.3%)"
+    ],
+    "penalties": {
+      "originality": "Buena idea de clasificador sonoro pasivo.",
+      "ambition": "Ejecutar ONNX en Android es demandante.",
+      "execution": "Complet\u00f3 la detecci\u00f3n b\u00e1sica en escenarios de prueba.",
+      "impact": "Privacidad delicada al requerir micr\u00f3fono encendido constante.",
+      "technical": "C\u00f3digo Kotlin idiom\u00e1tico con arquitectura Clean."
     }
   },
   {
-    id: 21,
-    name: "Veridian",
-    track: "🛡️ AI Security",
-    technicalScore: 4.10,
-    originalityScore: 7.9,
-    ambitionScore: 8.0,
-    executionScore: 1.5,
-    impactScore: 6.5,
-    architectureScore: 1.5,
-    verdictLabel: "SEVERAMENTE PENALIZADO: CERO CÓDIGO FUENTE EN EL REPOSITORIO",
-    summary: "Middleware para FastAPI contra credential stuffing. Documentación y demos en Render de gran nivel, pero NINGUNA línea de código en el repo oficial.",
-    stack: ["Python", "FastAPI", "Render (Código retenido fuera de la org)"],
-    loc: 0,
-    testsCount: 0,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-21",
-    keyStrengths: [
-      "Problema comercial de inmenso valor (costo de brechas de seguridad)",
-      "Excelente pitch y documentación descriptiva"
+    "id": 4,
+    "name": "Agent Zero",
+    "track": "\ud83d\udee1\ufe0f AI Security",
+    "technicalScore": 7.9,
+    "originalityScore": 7.4,
+    "ambitionScore": 7.8,
+    "executionScore": 7.8,
+    "impactScore": 7.2,
+    "architectureScore": 8.0,
+    "finalMarketProb": 0.1,
+    "verdictLabel": "ARENA DE RED TEAMING AUTOMATIZADO CON RECHAZO TOTAL EN EL MERCADO (0.1%)",
+    "summary": "Entorno automatizado para simular ataques y jailbreaks sobre modelos de lenguaje; hiper-optimizado para auditor\u00edas sint\u00e9ticas pero sin conexi\u00f3n con los jurados.",
+    "stack": [
+      "Python",
+      "FastAPI",
+      "React",
+      "Biome",
+      "Docker",
+      "Render"
     ],
-    criticalFlaws: [
-      "VIOLACIÓN DE BASES: Cero código subido al repositorio de la organización; inauditable"
+    "loc": 21300,
+    "implementationQuality": "Stack FastAPI/React pulido con pipelines de CI y tests sint\u00e9ticos de IA, pero con tracci\u00f3n nula",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-4",
+    "keyStrengths": [
+      "Herramientas de testing y linting configuradas con rigor",
+      "Despliegues reproducibles con Docker y Render"
     ],
-    penalties: {
-      originality: "Middleware contra robo de credenciales con IA.",
-      ambition: "Protección en caliente sin fricción para el usuario legítimo.",
-      execution: "CERO líneas de código en el repositorio; descalificación técnica parcial.",
-      impact: "El mercado lo necesita, pero la opacidad destruye la confianza.",
-      technical: "Imposible auditar código inexistente en la plataforma oficial."
+    "criticalFlaws": [
+      "El ep\u00edtome de la trampa de auditor\u00eda est\u00e1tica: calificado con 8.91 por sus tests autom\u00e1ticos, pero cay\u00f3 a 0.1% en el mercado real",
+      "Pitch mon\u00f3tono y sin demo interactiva memorable"
+    ],
+    "penalties": {
+      "originality": "Wrapper de prompts de adversarial testing.",
+      "ambition": "Buena estructuraci\u00f3n de backend pero sin innovaci\u00f3n sustancial.",
+      "execution": "Los endpoints responden r\u00e1pido bajo datos de muestra.",
+      "impact": "Desinter\u00e9s palpable del mercado y de los asistentes.",
+      "technical": "C\u00f3digo limpio pero est\u00e1ndar de boilerplate web."
     }
   },
   {
-    id: 3,
-    name: "Team 3 (Sin Entrega)",
-    track: "🚨 Emergencias",
-    technicalScore: 1.00,
-    originalityScore: 1.0,
-    ambitionScore: 1.0,
-    executionScore: 1.0,
-    impactScore: 1.0,
-    architectureScore: 1.0,
-    verdictLabel: "DESCALIFICADO POR ABANDONO",
-    summary: "Repositorio sin commits de desarrollo.",
-    stack: ["Ninguno"],
-    loc: 0,
-    testsCount: 0,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-3",
-    keyStrengths: [],
-    criticalFlaws: ["Sin entrega"],
-    penalties: { originality: "Sin entrega.", ambition: "Sin entrega.", execution: "Sin entrega.", impact: "Sin entrega.", technical: "Sin entrega." }
+    "id": 18,
+    "name": "C\u00e9flow",
+    "track": "\ud83e\uddca Three-Dimensional",
+    "technicalScore": 7.6,
+    "originalityScore": 8.2,
+    "ambitionScore": 8.3,
+    "executionScore": 7.2,
+    "impactScore": 7.5,
+    "architectureScore": 7.4,
+    "finalMarketProb": 0.1,
+    "verdictLabel": "PLANIFICACI\u00d3N ODONTOL\u00d3GICA 3D AUTOMATIZADA CON THREE.JS Y DOCKER",
+    "summary": "Software 3D para ortodoncia y an\u00e1lisis dental: carga escaneos intraorales y automatiza segmentaci\u00f3n de piezas dentales para planificaci\u00f3n m\u00e9dica.",
+    "stack": [
+      "TypeScript",
+      "Three.js",
+      "Vite",
+      "Express",
+      "Docker",
+      "Render"
+    ],
+    "loc": 16200,
+    "implementationQuality": "Visualizador 3D m\u00e9dico con shaders para an\u00e1lisis oclusal y backend Express",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-18",
+    "keyStrengths": [
+      "Nicho m\u00e9dico real con valor de mercado alto si funciona",
+      "Manejo de archivos STL/OBJ m\u00e9dicos en el canvas del navegador"
+    ],
+    "criticalFlaws": [
+      "Segmentaci\u00f3n dental simplificada que requiere supervisi\u00f3n cl\u00ednica manual",
+      "Mercado colapsado a 0.1% por ser un nicho muy ajeno a la din\u00e1mica del evento"
+    ],
+    "penalties": {
+      "originality": "Muy interesante aplicaci\u00f3n de WebGL a odontolog\u00eda.",
+      "ambition": "Alt\u00edsima; segmentar piezas dentales en 3D es problema de tesis.",
+      "execution": "El visor 3D carga las piezas pero las herramientas de corte son rudimentarias.",
+      "impact": "Excelente caso B2B de largo plazo.",
+      "technical": "Monorepo con Docker y pipeline de build configurado."
+    }
   },
   {
-    id: 6,
-    name: "Team 6 (Sin Entrega)",
-    track: "🛡️ AI Security",
-    technicalScore: 1.00,
-    originalityScore: 1.0,
-    ambitionScore: 1.0,
-    executionScore: 1.0,
-    impactScore: 1.0,
-    architectureScore: 1.0,
-    verdictLabel: "DESCALIFICADO POR ABANDONO",
-    summary: "Repositorio sin commits de desarrollo.",
-    stack: ["Ninguno"],
-    loc: 0,
-    testsCount: 0,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-6",
-    keyStrengths: [],
-    criticalFlaws: ["Sin entrega"],
-    penalties: { originality: "Sin entrega.", ambition: "Sin entrega.", execution: "Sin entrega.", impact: "Sin entrega.", technical: "Sin entrega." }
+    "id": 6,
+    "name": "Gotchu",
+    "track": "\ud83d\udee1\ufe0f AI Security",
+    "technicalScore": 7.2,
+    "originalityScore": 7.3,
+    "ambitionScore": 7.5,
+    "executionScore": 7.0,
+    "impactScore": 7.1,
+    "architectureScore": 7.2,
+    "finalMarketProb": 0.0,
+    "verdictLabel": "DEFENSA DE AGENTES DE IA CON INFRAESTRUCTURA CONTENEDORIZADA",
+    "summary": "Herramienta de monitoreo pasivo para detectar desv\u00edos de comportamiento y prompt injections en pipelines de agentes empresariales.",
+    "stack": [
+      "TypeScript",
+      "Docker",
+      "Node.js",
+      "pnpm-workspace",
+      "Vitest"
+    ],
+    "loc": 11800,
+    "implementationQuality": "Monorepo con soporte Docker, suite de integraci\u00f3n y reglas de firewall de prompts",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-6",
+    "keyStrengths": [
+      "Configuraci\u00f3n de monorepo con pnpm workspaces y Dockerfile funcional",
+      "Tests de integraci\u00f3n con Vitest para validar reglas de sanitizaci\u00f3n"
+    ],
+    "criticalFlaws": [
+      "Sin tracci\u00f3n alguna en el mercado (0.0%)",
+      "Propuesta opacada por soluciones de seguridad m\u00e1s maduras como VanGUARD"
+    ],
+    "penalties": {
+      "originality": "Concepto est\u00e1ndar de middleware de inspecci\u00f3n de texto.",
+      "ambition": "Media; alcance acotado a un filtro de expresiones regulares y LLM judge.",
+      "execution": "Contenedor levanta y expone endpoints de chequeo.",
+      "impact": "Poco diferenciable en un track saturado de seguridad.",
+      "technical": "Estructura de monorepo correcta pero con l\u00f3gica de negocio reducida."
+    }
   },
   {
-    id: 9,
-    name: "Team 9 (Sin Entrega)",
-    track: "🚨 Emergencias",
-    technicalScore: 1.00,
-    originalityScore: 1.0,
-    ambitionScore: 1.0,
-    executionScore: 1.0,
-    impactScore: 1.0,
-    architectureScore: 1.0,
-    verdictLabel: "DESCALIFICADO POR ABANDONO",
-    summary: "Repositorio sin commits de desarrollo.",
-    stack: ["Ninguno"],
-    loc: 0,
-    testsCount: 0,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-9",
-    keyStrengths: [],
-    criticalFlaws: ["Sin entrega"],
-    penalties: { originality: "Sin entrega.", ambition: "Sin entrega.", execution: "Sin entrega.", impact: "Sin entrega.", technical: "Sin entrega." }
+    "id": 24,
+    "name": "Constancia",
+    "track": "\ud83e\udd1d Trust",
+    "technicalScore": 7.4,
+    "originalityScore": 7.3,
+    "ambitionScore": 7.6,
+    "executionScore": 7.4,
+    "impactScore": 7.0,
+    "architectureScore": 7.8,
+    "finalMarketProb": 0.0,
+    "verdictLabel": "ESPECIFICACI\u00d3N FORMAL W3C VC 2.0 PERO CON CERO VOLUMEN DE MERCADO (0.0%)",
+    "summary": "Implementaci\u00f3n t\u00e9cnica de credenciales verificables seg\u00fan los est\u00e1ndares W3C VC 2.0 y firmas criptogr\u00e1ficas distribuidas; gran burocracia de tipos sin tracci\u00f3n en la vida real.",
+    "stack": [
+      "TypeScript",
+      "Next.js",
+      "Prisma",
+      "Vitest",
+      "Zod",
+      "W3C VC 2.0"
+    ],
+    "loc": 18900,
+    "implementationQuality": "Tipado exhaustivo y cumplimiento estricto de especificaciones W3C con 0 tracci\u00f3n comercial",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-24",
+    "keyStrengths": [
+      "Tipado estricto en TypeScript y esquemas Zod impecables",
+      "Comprensi\u00f3n te\u00f3rica profunda de est\u00e1ndares criptogr\u00e1ficos internacionales"
+    ],
+    "criticalFlaws": [
+      "0.0% en el mercado: nadie en el evento entendi\u00f3 ni quiso comprar un validador de JSON-LD abstracto",
+      "Falta total de experiencia de usuario pr\u00e1ctica o incentivos de adopci\u00f3n"
+    ],
+    "penalties": {
+      "originality": "Implementaci\u00f3n de una RFC ya escrita por un consorcio.",
+      "ambition": "Elevada en rigor tipado, nula en experiencia de producto.",
+      "execution": "Los tests de Vitest pasan; la demo consisti\u00f3 en inspeccionar JSONs.",
+      "impact": "Inexistente en la hackathon.",
+      "technical": "C\u00f3digo limpio pero est\u00e9ril como producto de mercado."
+    }
   },
   {
-    id: 12,
-    name: "Team 12 (Sin Entrega)",
-    track: "🛡️ AI Security",
-    technicalScore: 1.00,
-    originalityScore: 1.0,
-    ambitionScore: 1.0,
-    executionScore: 1.0,
-    impactScore: 1.0,
-    architectureScore: 1.0,
-    verdictLabel: "DESCALIFICADO POR ABANDONO",
-    summary: "Repositorio sin commits de desarrollo.",
-    stack: ["Ninguno"],
-    loc: 0,
-    testsCount: 0,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-12",
-    keyStrengths: [],
-    criticalFlaws: ["Sin entrega"],
-    penalties: { originality: "Sin entrega.", ambition: "Sin entrega.", execution: "Sin entrega.", impact: "Sin entrega.", technical: "Sin entrega." }
+    "id": 10,
+    "name": "Prais",
+    "track": "\ud83e\udd1d Trust",
+    "technicalScore": 7.1,
+    "originalityScore": 7.2,
+    "ambitionScore": 7.3,
+    "executionScore": 7.0,
+    "impactScore": 7.1,
+    "architectureScore": 7.0,
+    "finalMarketProb": 0.0,
+    "verdictLabel": "TRANSPARENCIA DE PRECIOS CON SCRAPING E INGESTA AUTOM\u00c1TICA",
+    "summary": "Monitor c\u00edvico que recolecta precios de productos de consumo masivo con Firecrawl y normaliza datos con OpenAI para auditar inflaci\u00f3n en comercios.",
+    "stack": [
+      "TypeScript",
+      "Python",
+      "Next.js",
+      "Firecrawl",
+      "OpenAI",
+      "Supabase"
+    ],
+    "loc": 9400,
+    "implementationQuality": "Pipeline de scraping asistido por LLM y base de datos relacional en Supabase",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-10",
+    "keyStrengths": [
+      "Integraci\u00f3n de Firecrawl para extracci\u00f3n web semi-estructurada",
+      "Visualizador de gr\u00e1ficos comparativos de precios"
+    ],
+    "criticalFlaws": [
+      "Ruptura de scrapers ante cambios sutiles en los e-commerce analizados",
+      "Cero inter\u00e9s de los apostadores en el market (0.0%)"
+    ],
+    "penalties": {
+      "originality": "Idea repetida en m\u00faltiples hackathons.",
+      "ambition": "Baja; el scraping est\u00e1 delegado a una API externa de pago.",
+      "execution": "Tablas b\u00e1sicas con pocos datos precargados.",
+      "impact": "\u00datil si se mantiene actualizada, pero insostenible sin mantenimiento continuo.",
+      "technical": "Frontend est\u00e1ndar con consultas simples a Supabase."
+    }
   },
   {
-    id: 18,
-    name: "Team 18 (Sin Entrega)",
-    track: "Desconocido",
-    technicalScore: 1.00,
-    originalityScore: 1.0,
-    ambitionScore: 1.0,
-    executionScore: 1.0,
-    impactScore: 1.0,
-    architectureScore: 1.0,
-    verdictLabel: "DESCALIFICADO POR ABANDONO",
-    summary: "Repositorio sin commits de desarrollo.",
-    stack: ["Ninguno"],
-    loc: 0,
-    testsCount: 0,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-18",
-    keyStrengths: [],
-    criticalFlaws: ["Sin entrega"],
-    penalties: { originality: "Sin entrega.", ambition: "Sin entrega.", execution: "Sin entrega.", impact: "Sin entrega.", technical: "Sin entrega." }
+    "id": 28,
+    "name": "Rastro",
+    "track": "\ud83e\udd1d Trust",
+    "technicalScore": 6.9,
+    "originalityScore": 7.0,
+    "ambitionScore": 7.2,
+    "executionScore": 6.8,
+    "impactScore": 6.9,
+    "architectureScore": 7.0,
+    "finalMarketProb": 0.0,
+    "verdictLabel": "AUDITOR\u00cdA DE FONDOS P\u00daBLICOS SOBRE BASE SEPOLIA",
+    "summary": "Trazabilidad de partidas presupuestarias con smart contracts en Ethereum L2 (Base Sepolia) y verificaci\u00f3n de facturas subidas por contratistas.",
+    "stack": [
+      "Solidity (Base Sepolia)",
+      "TypeScript",
+      "Viem",
+      "Wagmi",
+      "Next.js",
+      "Supabase"
+    ],
+    "loc": 11200,
+    "implementationQuality": "Contratos Solidity sencillos montados sobre Base Sepolia con clientes Wagmi/Viem",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-28",
+    "keyStrengths": [
+      "Despliegue operativo en red de pruebas Base Sepolia",
+      "Uso de librer\u00edas modernas del ecosistema Ethereum (Viem y Wagmi)"
+    ],
+    "criticalFlaws": [
+      "Falta el eslab\u00f3n clave: un or\u00e1culo que valide si la obra f\u00edsica realmente se ejecut\u00f3",
+      "Cero votos y 0.0% de mercado final"
+    ],
+    "penalties": {
+      "originality": "Caso de uso can\u00f3nico de blockchain para transparencia gubernamental.",
+      "ambition": "Media; el contrato es un registro de hashes con mapping simple.",
+      "execution": "Transacciones confirmadas en block explorer durante la demo.",
+      "impact": "Inviable pol\u00edticamente sin adopci\u00f3n institucional del estado.",
+      "technical": "Integraci\u00f3n frontend correcta con billetera MetaMask."
+    }
   },
   {
-    id: 23,
-    name: "Team 23 (Sin Entrega)",
-    track: "🛡️ AI Security",
-    technicalScore: 1.00,
-    originalityScore: 1.0,
-    ambitionScore: 1.0,
-    executionScore: 1.0,
-    impactScore: 1.0,
-    architectureScore: 1.0,
-    verdictLabel: "DESCALIFICADO POR ABANDONO",
-    summary: "Repositorio sin commits de desarrollo.",
-    stack: ["Ninguno"],
-    loc: 0,
-    testsCount: 0,
-    repoUrl: "https://github.com/platanus-hack/platanus-hack-26-ve-team-23",
-    keyStrengths: [],
-    criticalFlaws: ["Sin entrega"],
-    penalties: { originality: "Sin entrega.", ambition: "Sin entrega.", execution: "Sin entrega.", impact: "Sin entrega.", technical: "Sin entrega." }
+    "id": 9,
+    "name": "team-9",
+    "track": "Desconocido",
+    "technicalScore": 1.0,
+    "originalityScore": 1.0,
+    "ambitionScore": 1.0,
+    "executionScore": 1.0,
+    "impactScore": 1.0,
+    "architectureScore": 1.0,
+    "finalMarketProb": 0.0,
+    "verdictLabel": "\u00daNICO EQUIPO DESCALIFICADO POR ABANDONO (REPO PLANTILLA SIN C\u00d3DIGO)",
+    "summary": "Repositorio con el template por defecto de la organizaci\u00f3n; no se subi\u00f3 c\u00f3digo, documentaci\u00f3n ni prototipo ejecutable.",
+    "stack": [
+      "Ninguno"
+    ],
+    "loc": 0,
+    "implementationQuality": "Sin c\u00f3digo fuente entregado",
+    "repoUrl": "https://github.com/platanus-hack/platanus-hack-26-ve-team-9",
+    "keyStrengths": [],
+    "criticalFlaws": [
+      "Repositorio abandonado sin entregables auditables",
+      "0.0% en el mercado y descalificaci\u00f3n autom\u00e1tica de la casa de apuestas"
+    ],
+    "penalties": {
+      "originality": "Sin entrega.",
+      "ambition": "Sin entrega.",
+      "execution": "Sin entrega.",
+      "impact": "Sin entrega.",
+      "technical": "Sin entrega."
+    }
   }
 ];

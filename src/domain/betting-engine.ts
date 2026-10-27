@@ -5,58 +5,67 @@ export const MAX_SINGLE_BET = 400;
 export const MIN_BET = 10;
 
 /**
- * Calcula la cuota decimal que ofrece la casa según la solidez técnica auditada.
- * A mayor nota técnica previa, menor cuota (favorito).
+ * Calcula la cuota decimal de mercado.
+ * En un mercado de predicción real, la cuota es inversamente proporcional a la probabilidad de mercado.
+ * Incorpora un margen de casa ('vig') estándar del 5-8%.
  */
-export function calculateMarketOdds(technicalScore: number): number {
-  if (technicalScore <= 2.5) {
-    return 0; // Descalificado o sin código: la casa no acepta apuestas
+export function calculateMarketOdds(technicalScore: number, finalMarketProb: number): number {
+  if (technicalScore <= 2.5 || finalMarketProb <= 0) {
+    return 0; // Descalificado o sin probabilidad de mercado
   }
-  // Escala logarítmica: de 1.25x para los favoritos (9.5) hasta 7.50x para sorpresas (6.0)
-  const odds = 1.15 + Math.pow((10 - technicalScore) / 4.2, 1.85);
-  return Math.round(odds * 100) / 100;
+
+  // Cuota de mercado real con spread: odds = 1 / (probabilidad normalizada)
+  const prob = finalMarketProb / 100;
+  const rawOdds = 0.95 / prob;
+
+  // Clampear entre 1.40x y 75.00x para asegurar jugabilidad
+  const clamped = Math.max(1.40, Math.min(75.0, rawOdds));
+  return Math.round(clamped * 100) / 100;
 }
 
 /**
- * Motor de recomendación de apuestas basado en Kelly Criterion y balance Técnico vs Pitch.
+ * Motor de recomendación de apuestas calibrado:
+ * - 40% Arquitectura y complejidad real de código
+ * - 60% Ejecución en vivo, impacto y pitch en escenario
+ * - Criterio de Kelly ajustado al valor esperado de mercado
  */
 export function calculateBetRecommendation(
   team: TeamEvaluation,
   pitchScore: number,
   currentBankroll: number
 ): BetRecommendation {
-  // 1. Puntaje combinado ponderado: 60% código auditado + 40% performance de pitch
-  const combinedScore = Math.round((team.technicalScore * 0.6 + pitchScore * 0.4) * 100) / 100;
+  // 1. Puntaje combinado ponderado de hackathon (60% demo/pitch + 40% arquitectura técnica real)
+  const combinedScore = Math.round((team.technicalScore * 0.40 + pitchScore * 0.60) * 100) / 100;
   
-  const odds = calculateMarketOdds(team.technicalScore);
+  const odds = calculateMarketOdds(team.technicalScore, team.finalMarketProb);
   
-  if (odds === 0 || team.technicalScore <= 2.5) {
+  if (odds === 0 || team.technicalScore <= 2.5 || team.finalMarketProb <= 0) {
     return {
       combinedScore,
       odds: 0,
       recommendedAmount: 0,
       confidenceTag: 'DESCALIFICADO',
       expectedValue: -1,
-      analysisReason: 'Repositorio sin código fuente. Apostar acá es tirar bananas a la basura.',
+      analysisReason: 'Repositorio sin código funcional o sin tracción en el mercado de la hackathon.',
     };
   }
 
-  // 2. Probabilidad implícita estimada de que el jurado lo premie en el top
-  const winProbability = Math.min(0.92, Math.max(0.05, Math.pow(combinedScore / 10, 2.1)));
+  // 2. Probabilidad implícita que estima el modelo basada en ejecución y tracción de mercado
+  const modelProb = Math.min(0.95, Math.max(0.01, (combinedScore / 10) * (team.finalMarketProb / 100) * 2.8));
 
-  // 3. Valor esperado (EV = p * cuota - 1)
-  const expectedValue = Math.round((winProbability * odds - 1) * 100) / 100;
+  // 3. Valor esperado (EV = modelProb * odds - 1)
+  const expectedValue = Math.round((modelProb * odds - 1) * 100) / 100;
 
-  // 4. Criterio de Kelly fraccional (Quarter-Kelly para proteger el bankroll de 1.000 bananas)
+  // 4. Criterio de Kelly fraccional (proteger el bankroll contra volatilidad de hackathon)
   const b = odds - 1;
-  const p = winProbability;
+  const p = Math.max(0.01, Math.min(0.95, (team.finalMarketProb / 100) * (pitchScore / 7.0)));
   const q = 1 - p;
   const kellyFraction = Math.max(0, (b * p - q) / b);
-  const quarterKelly = kellyFraction * 0.35;
+  const fractionalKelly = kellyFraction * 0.40;
 
-  let recommendedAmount = Math.round(currentBankroll * quarterKelly);
+  let recommendedAmount = Math.round(currentBankroll * fractionalKelly);
 
-  // Ajustes de límites de apuesta
+  // Límites de riesgo
   if (recommendedAmount > MAX_SINGLE_BET) {
     recommendedAmount = MAX_SINGLE_BET;
   }
@@ -66,31 +75,34 @@ export function calculateBetRecommendation(
   if (recommendedAmount > currentBankroll) {
     recommendedAmount = currentBankroll;
   }
-  if (expectedValue <= 0) {
+  if (expectedValue <= 0 || team.finalMarketProb < 1.0) {
     recommendedAmount = 0;
   }
 
-  // 5. Etiqueta de confianza y justificación
+  // 5. Categorías de confianza basadas en la realidad técnica y el mercado
   let confidenceTag: BetRecommendation['confidenceTag'] = 'ESPECULATIVO';
   let analysisReason = '';
 
-  if (combinedScore >= 9.0 && expectedValue > 0.15) {
+  if (team.isWinner || (team.finalMarketProb >= 30 && team.technicalScore >= 9.0)) {
     confidenceTag = 'SEGURO';
-    analysisReason = `Código de titanio (${team.testsCount} tests) y pitch convincente. Apuesta fuerte obligatoria.`;
-  } else if (pitchScore >= 8.5 && team.technicalScore >= 7.5 && expectedValue > 0.10) {
+    analysisReason = 'Arquitectura 3D en 4 capas (Vitest, WebGL <300 draw calls, shaders GLSL) y resiliencia procedural en vivo. Ganador indiscutido.';
+  } else if (team.finalMarketProb >= 10 && team.technicalScore >= 8.5) {
     confidenceTag = 'VALOR ALTO';
-    analysisReason = 'El pitch compensa la deuda técnica y la cuota ofrece gran retorno esperado.';
-  } else if (pitchScore >= 8.0 && team.technicalScore < 7.0) {
+    analysisReason = `Excelente tracción (${team.finalMarketProb}%) con base técnica sólida (${team.implementationQuality}). Gran retorno esperado.`;
+  } else if (team.finalMarketProb < 2.0 && team.technicalScore >= 8.0) {
     confidenceTag = 'TRAMPA';
-    analysisReason = 'Mucho humo en el escenario pero el repositorio tiene fisuras severas. No regales tus bananas.';
-  } else if (team.testsCount === 0 && team.technicalScore > 7.0) {
+    analysisReason = `Alerta de trampa: inflado con tests artificiales o código burocrático pero rechazado por el mercado (${team.finalMarketProb}%). No regales tus bananas.`;
+  } else if (team.finalMarketProb >= 5.0 && pitchScore >= 8.0) {
+    confidenceTag = 'VALOR ALTO';
+    analysisReason = 'Fuerte tracción de mercado y gran demo en vivo. Cuota atractiva para diversificar.';
+  } else if (team.finalMarketProb > 0 && team.finalMarketProb < 1.5) {
     confidenceTag = 'ESPECULATIVO';
-    analysisReason = 'Ambicioso pero sin tests. Riesgo de fallo en vivo frente al jurado.';
+    analysisReason = `Baja probabilidad real (${team.finalMarketProb}%). Solo para apuestas testimoniales de alto riesgo.`;
   } else {
     confidenceTag = expectedValue > 0 ? 'VALOR ALTO' : 'TRAMPA';
     analysisReason = expectedValue > 0 
       ? 'Retorno matemático positivo con riesgo moderado.' 
-      : 'Cuota castigada o pitch insuficiente para justificar el riesgo.';
+      : 'Cuota castigada o falta de tracción real para justificar el riesgo.';
   }
 
   return {
